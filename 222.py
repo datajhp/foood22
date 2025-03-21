@@ -48,8 +48,8 @@ with col2:
     st.subheader("     📌 다와푸드 큐비")
     st.markdown(
             f"""
-     <div style="width: 6500px; height: 700px; overflow: hidden;">
-         <iframe src="{url4}" width="650" height="700" 
+     <div style="width: 650px; height: 700px; overflow: hidden;">
+         <iframe src="{url4}" width="650" height="7000" 
                  style="transform: scale(0.5); transform-origin: 0 0;">
          </iframe>
      </div>
