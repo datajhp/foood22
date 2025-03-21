@@ -37,17 +37,20 @@ url4 = "https://blog.naver.com/dawafood-qubi"
 col3, col4 = st.columns(2)
 
 # 첫 번째 열에 URL1 임베딩
-with col3:
-    st.subheader("📌 만나")
-    components.iframe( """
-    <div style="overflow: hidden; width: 1000px; height: 600px;">
-        <iframe src="https://blog.naver.com/dawafood-qubi" 
-                width="1250" height="750" 
-                style="transform: scale(0.8); transform-origin: top left;">
-        </iframe>
-    </div>
-    """,
-    height=600)
+with col2:
+    st.subheader("📌 정담식당")
+    
+    # HTML을 활용하여 iframe 축소
+    st.markdown(
+        f"""
+        <div style="overflow: hidden; width: 800px; height: 480px;">
+            <iframe src="{url3}" width="1250" height="750" 
+                    style="transform: scale(0.8);">
+            </iframe>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )    
 
 # 두 번째 열에 URL2 임베딩
 with col4:
@@ -56,7 +59,7 @@ with col4:
         f"""
         <div style="overflow: hidden; width: 800px; height: 480px;">
             <iframe src="{url4}" width="1250" height="750" 
-                    style="transform: scale(0.8); transform-origin: top left;">
+                    style="transform: scale(0.8);">
             </iframe>
         </div>
         """,
