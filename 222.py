@@ -176,8 +176,9 @@ if st.button("저장하고 이미지 가져오기"):
 import streamlit as st
 
 
+st.write("\n")
 # 페이지 내용
-st.write("📞모든 광고문의를 환영합니다. 🏠퇴근도 환영합니다.")
+st.write("📞모든 광고문의를 환영합니다📞. 🏠퇴근도 환영합니다🏠.")
 
 # 하단 정보 영역
 st.markdown(
