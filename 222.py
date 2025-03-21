@@ -177,15 +177,15 @@ import streamlit as st
 
 
 st.write("\n")
-# 페이지 내용
-st.write("📞모든 광고문의를 환영합니다📞. 🏠퇴근도 환영합니다🏠.")
+st.write("\n")
 
 st.markdown(
     """
     <div style="background-color: #f2f2f2; color: #000; padding: 20px; text-align: center; font-size: 18px; 
                 border-radius: 10px; border: 2px solid #ccc; margin-bottom: 20px; width: 100%; font-weight: bold;">
         🚀 **광고 배너** 🚀 <br>
-        이 자리는 광고 공간입니다. **광고를 게재하려면 여기를 클릭**하세요!
+        이 자리는 광고 공간입니다. **광고를 게재하려면 여기를 클릭**하세요!<br>
+        문의사항과 가치있는 개발 아이디어도 보내주세요! 
         <br>
         <a href="https://open.kakao.com/o/sTv70Umh" target="_blank" style="color: #4CAF50; text-decoration: none;">광고 자세히 보기</a>
     </div>
@@ -205,5 +205,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+# 페이지 내용
+st.write("📞모든 광고문의를 환영합니다📞. 🏠퇴근도 환영합니다🏠.")
 
