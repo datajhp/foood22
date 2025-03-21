@@ -33,7 +33,7 @@ with col1:
     st.markdown(
         f"""
      <div style="width: 650px; height: 700px; overflow: hidden;">
-         <iframe src="{url3}" width="1000" height="7000" 
+         <iframe src="{url3}" width="900" height="7000" 
                  style="transform: scale(0.35); transform-origin: 0 0;">
          </iframe>
      </div>
