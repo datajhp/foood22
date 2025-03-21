@@ -30,8 +30,8 @@ with col1:
     components.iframe(url1, height=600, width=1000)
     st.subheader("📌 만나")
     st.markdown(f"""
-         <div style="display: flex; justify-content: center; align-items: flex-start width:"200%" overflow: hidden;">
-            <iframe src="{url4}" width="650" height="700" 
+         <div style="display: flex; justify-content: center; align-items: flex-start; width:"200%"; overflow: hidden;">
+            <iframe src="{url3}" width="650" height="700" 
                     style="transform: scale(1); transform-origin: center;">
             </iframe>
         </div>
@@ -46,7 +46,7 @@ with col2:
     st.subheader("     📌 다와푸드 큐비")
     st.markdown(
         f"""
-         <div style="display: flex; justify-content: center; align-items: flex-start width: 30%; overflow: hidden;">
+         <div style="display: flex; justify-content: center; align-items: flex-start; width: 30%; overflow: hidden;">
             <iframe src="{url4}" width="650" height="700" 
                     style="transform: scale(1); transform-origin: center;">
             </iframe>
