@@ -50,7 +50,7 @@ with col2:
             f"""
      <div style="width: 650px; height: 700px; overflow: hidden;">
          <iframe src="{url4}" width="650" height="7000" 
-                 style="transform: scale(0.5); transform-origin: 0 0;">
+                 style="transform: scale(0.55); transform-origin: 0 0;">
          </iframe>
      </div>
      """,
