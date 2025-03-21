@@ -28,7 +28,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader("📌 슈마우스만찬")
     components.iframe(url1, height=600, width=1000)
-    st.subheader("📌 정담식당")
+    st.subheader2("📌 만나")
     st.markdown(
         f"""
          <div style="display: flex; justify-content: center; align-items: flex-start width: 100%; overflow: hidden;">
@@ -44,7 +44,7 @@ with col1:
 with col2:
     st.subheader("     📌 정담식당")
     components.iframe(url2, height=600, width=1000)
-    st.subheader("     📌 다와푸드 큐비")
+    st.subheader2("     📌 다와푸드 큐비")
     st.markdown(
         f"""
          <div style="display: flex; justify-content: center; overflow: hidden;">
