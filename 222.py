@@ -10,19 +10,6 @@ import datetime
 import random
 
 
-st.markdown(
-    """
-    <style>
-    .reportview-container .main .block-container {
-        max-width: 2700px;
-        padding-left: 0rem;
-        padding-right: 0rem;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 
 # 카카오톡 채널 임베딩
 today_date = datetime.date.today()
@@ -47,7 +34,7 @@ with col1:
         f"""
      <div style="width: 650px; height: 700px; overflow: hidden;">
          <iframe src="{url3}" width="650" height="700" 
-                 style="transform: scale(0.7); transform-origin: 0 0;">
+                 style="transform: scale(0.5); transform-origin: 0 0;">
          </iframe>
      </div>
      """,
@@ -63,7 +50,7 @@ with col2:
             f"""
      <div style="width: 650px; height: 700px; overflow: hidden;">
          <iframe src="{url4}" width="650" height="700" 
-                 style="transform: scale(0.7); transform-origin: 0 0;">
+                 style="transform: scale(0.5); transform-origin: 0 0;">
          </iframe>
      </div>
      """,
