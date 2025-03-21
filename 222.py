@@ -14,7 +14,7 @@ import random
 # 카카오톡 채널 임베딩
 today_date = datetime.date.today()
 st.title(f"<{today_date}> 🍽️오늘의 메뉴's🍽️")
-st.sub.title(f"<{today_date}> 🍽️오늘의 메뉴's🍽️")
+st.subtitle(f"<{today_date}> 🍽️오늘의 메뉴's🍽️")
 
 # 카카오톡 채널 URL 2개
 url1 = "https://pf.kakao.com/_CiVis/posts"
