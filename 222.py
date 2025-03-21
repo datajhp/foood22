@@ -29,8 +29,8 @@ with col1:
     st.subheader("📌 슈마우스만찬")
     components.iframe(url1, height=600, width=1000)
     st.subheader("📌 만나")
-    st.markdown(f"""
-            f"""
+    st.markdown(
+        f"""
      <div style="width: 650px; height: 700px; overflow: hidden;">
          <iframe src="{url3}" width="650" height="700" 
                  style="transform: scale(0.7); transform-origin: 0 0;">
