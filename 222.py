@@ -34,7 +34,7 @@ with col1:
         f"""
      <div style="width: 650px; height: 700px; overflow: hidden;">
          <iframe src="{url3}" width="1000" height="7000" 
-                 style="transform: scale(0.25); transform-origin: 0 0;">
+                 style="transform: scale(0.4); transform-origin: 0 0;">
          </iframe>
      </div>
      """,
