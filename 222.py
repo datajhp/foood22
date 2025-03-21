@@ -45,14 +45,14 @@ with col2:
     components.iframe(url2, height=600, width=1000)
     st.subheader("     📌 다와푸드 큐비")
     st.markdown(
-        f"""
-         <div style="display: flex; justify-content: center; align-items: flex-start; width: 30%; overflow: hidden;">
-            <iframe src="{url4}" width="650" height="700" 
-                    style="transform: scale(1); transform-origin: center;">
-            </iframe>
-        </div>
-        """,
-        unsafe_allow_html=True
+            f"""
+     <div style="width: 650px; height: 700px; overflow: hidden;">
+         <iframe src="{url4}" width="650" height="700" 
+                 style="transform: scale(0.7); transform-origin: 0 0;">
+         </iframe>
+     </div>
+     """,
+     unsafe_allow_html=True
     )
     
 if "button_clicked" not in st.session_state:
