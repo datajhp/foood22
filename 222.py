@@ -29,9 +29,29 @@ with col1:
 with col2:
     st.subheader("     📌 정담식당")
     components.iframe(url2, height=600, width=1000)
+
+url1 = "https://blog.naver.com/PostList.nhn?blogId=jusik1606&from=postList&categoryNo=6"
+url2 = "https://blog.naver.com/dawafood-qubi"
+
+# 2개의 열로 나누기
+col3, col4 = st.columns(2)
+
+# 첫 번째 열에 URL1 임베딩
+with col3:
+    st.subheader("📌 만나")
+    components.iframe(url1, height=600, width=1000)
+
+# 두 번째 열에 URL2 임베딩
+with col4:
+    st.subheader("     📌 다와푸드 큐비")
+    components.iframe(url2, height=600, width=1000)
+    
+if "button_clicked" not in st.session_state:
+    st.session_state.button_clicked = False
     
 # 랜덤 식당 추천
-if st.button("오늘의 메뉴 추천"):
+if st.button("오늘의 메뉴 추천", disabled=st.session_state.button_clicked):
+    st.session_state.button_clicked = True
     restaurants = ["🍽️슈마우스만찬","🍽️슈마우스만찬","🍽️슈마우스만찬", "🍽️정담식당","🍽️정담식당","🍽️정담식당","굶기"]
     random_restaurant = random.choice(restaurants)
 # 랜덤 추천 식당 표시
