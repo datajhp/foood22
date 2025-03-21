@@ -52,7 +52,16 @@ with col3:
 # 두 번째 열에 URL2 임베딩
 with col4:
     st.subheader("     📌 다와푸드 큐비")
-    components.iframe(url4, height=600, width=1000)
+    st.markdown(
+        f"""
+        <div style="overflow: hidden; width: 800px; height: 480px;">
+            <iframe src="{url4}" width="1250" height="750" 
+                    style="transform: scale(0.8); transform-origin: top left;">
+            </iframe>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     
 if "button_clicked" not in st.session_state:
     st.session_state.button_clicked = False    
