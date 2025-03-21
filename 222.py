@@ -30,7 +30,7 @@ with col1:
     components.iframe(url1, height=600, width=1000)
     st.subheader("📌 만나")
     st.markdown(f"""
-         <div style="display: flex; justify-content: center; align-items: flex-start width: 10%; height: 10%; overflow: hidden;">
+         <div style="display: flex; justify-content: center; align-items: flex-start width: 10%; height: 11%; overflow: hidden;">
             <iframe src="{url3}" width="650" height="700" 
                     style="transform: scale(1); transform-origin: center;">
             </iframe>
