@@ -30,6 +30,19 @@ with col1:
     components.iframe(url1, height=600, width=1000)
     st.subheader("📌 정담식당")
     st.markdown(
+    """
+    <style>
+        .stSubheader {
+            margin-bottom: 0px;
+        }
+        .stMarkdown {
+            margin-top: 0px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+    st.markdown(
         f"""
          <div style="display: flex; justify-content: flex-start; overflow: hidden;">
             <iframe src="{url3}" width="600" height="1000" 
