@@ -32,7 +32,7 @@ with col1:
     st.subheader("📌 만나")
     st.markdown(
         f"""
-     <div style="width: 325px; height: 350px; overflow: hidden;">
+     <div style="width: 162.5px; height: 175px; overflow: hidden;">
          <iframe src="{url3}" width="650" height="700" 
                  style="transform: scale(0.25); transform-origin: 0 0;">
          </iframe>
