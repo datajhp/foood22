@@ -32,7 +32,7 @@ with col1:
     st.markdown(
         f"""
          <div style="display: flex; justify-content: center; align-items: flex-start">
-            <iframe src="{url3}" width="600" height="1000" 
+            <iframe src="{url3}" width="600" height="700" 
                     style="transform: scale(0.8); transform-origin: center;">
             </iframe>
         </div>
