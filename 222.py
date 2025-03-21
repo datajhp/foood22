@@ -123,15 +123,15 @@ if default_url2 == "":
 
 
 # UI 구성
-st.title("오늘의 메뉴 이미지만 불러오기")
+st.subheader("<메뉴 이미지만 불러오기>")
 
 # 입력창 2개
 col_input1, col_input2 = st.columns(2)
 
 with col_input1:
-    url1 = st.text_input("URL 1 입력", value=default_url1)
+    url1 = st.text_input("슈마우스", value=default_url1)
 with col_input2:
-    url2 = st.text_input("URL 2 입력", value=default_url2)
+    url2 = st.text_input("정담", value=default_url2)
 
 # 버튼 클릭 시 동작
 if st.button("저장하고 이미지 가져오기"):
