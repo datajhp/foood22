@@ -9,7 +9,7 @@ import streamlit.components.v1 as components
 import datetime
 import random
 
-st.set_page_config(layout="wide")
+
 # 카카오톡 채널 임베딩
 today_date = datetime.date.today()
 st.title(f"🍽️{today_date} 오늘의 메뉴's🍽️")
@@ -58,8 +58,8 @@ with col4:
     st.subheader("     📌 다와푸드 큐비")
     st.markdown(
         f"""
-        <div style="overflow: hidden; width: 800px; height: 480px;">
-            <iframe src="{url4}" width="1250" height="750" 
+        <div style="display: flex; justify-content: center; align-items: center; overflow: hidden; width: 900px; height: 480px;">
+            <iframe src="{url4}" width="600" height="1000" 
                     style="transform: scale(0.8); transform-origin: center;">
             </iframe>
         </div>
