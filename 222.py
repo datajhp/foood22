@@ -45,7 +45,7 @@ with col3:
         f"""
         <div style="overflow: hidden; width: 800px; height: 480px;">
             <iframe src="{url3}" width="1250" height="750" 
-                    style="transform: scale(0.8);">
+                    style="transform: scale(0.8); transform-origin: center;">
             </iframe>
         </div>
         """,
@@ -59,7 +59,7 @@ with col4:
         f"""
         <div style="overflow: hidden; width: 800px; height: 480px;">
             <iframe src="{url4}" width="1250" height="750" 
-                    style="transform: scale(0.8);">
+                    style="transform: scale(0.8); transform-origin: center;">
             </iframe>
         </div>
         """,
