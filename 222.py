@@ -65,7 +65,7 @@ if st.button("오늘의 메뉴 추천", disabled=st.session_state.button_clicked
     restaurants = ["🍽️슈마우스만찬","🍽️슈마우스만찬","🍽️슈마우스만찬", "🍽️정담식당","🍽️정담식당","🍽️정담식당","굶기"]
     random_restaurant = random.choice(restaurants)
 # 랜덤 추천 식당 표시
-    st.subheader(f"오늘의 추천은: {random_restaurant} 입니다.")
+    st.subheader(f"결정이 힘든 당신에게..오늘의 메뉴는: {random_restaurant} 입니다! 맛점하세용")
 
 
 # 저장 파일 경로
