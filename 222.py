@@ -9,6 +9,7 @@ import streamlit.components.v1 as components
 import datetime
 import random
 
+st.set_page_config(layout="wide")
 # 카카오톡 채널 임베딩
 today_date = datetime.date.today()
 st.title(f"🍽️{today_date} 오늘의 메뉴's🍽️")
