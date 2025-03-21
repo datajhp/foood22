@@ -68,7 +68,7 @@ if st.button("오늘의 메뉴 추천", disabled=st.session_state.button_clicked
     random_restaurant = random.choice(restaurants)
 # 랜덤 추천 식당 표시
     st.subheader(f"결정이 힘든 당신..")
-    st.subheader(f"오늘의 메뉴는: {random_restaurant} 입니다‼️ 맛점하세용")
+    st.subheader(f"오늘은 {random_restaurant} 입니다‼️ 맛점하세용")
 
 
 st.subheader("\n")
