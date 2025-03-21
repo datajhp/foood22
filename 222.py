@@ -173,4 +173,24 @@ if st.button("저장하고 이미지 가져오기"):
             else:
                 st.warning("🍽️아직 메뉴가 공지되지 않았습니다.")
 
+import streamlit as st
+
+# 페이지 타이틀
+st.title("Streamlit App with Footer")
+
+# 페이지 내용
+st.write("이 페이지는 하단에 정보를 추가한 예시입니다.")
+
+# 하단 정보 영역
+st.markdown(
+    """
+    <div style="position: fixed; bottom: 0; width: 100%; background-color: #f1f1f1; text-align: center; padding: 10px 0;">
+        <p style="margin: 0; font-size: 14px; color: #555;">© 2025 Your Company | All Rights Reserved</p>
+        <p style="margin: 0; font-size: 12px; color: #888;">Contact us: contact@yourcompany.com</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
 st.subheader("모든 광고문의를 환영합니다. 퇴근도 환영합니다.")
