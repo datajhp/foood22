@@ -175,23 +175,20 @@ if st.button("저장하고 이미지 가져오기"):
 
 import streamlit as st
 
-# 페이지 타이틀
-st.title("Streamlit App with Footer")
 
 # 페이지 내용
-st.write("이 페이지는 하단에 정보를 추가한 예시입니다.")
+st.write("📞모든 광고문의를 환영합니다. 🏠퇴근도 환영합니다.")
 
 # 하단 정보 영역
 st.markdown(
    """
     <div style="position: fixed; bottom: 10px; right: 10px; background-color: #000000; color: #FFFFFF; 
                 padding: 10px 20px; border-radius: 5px; font-size: 12px; z-index: 1000;">
-        <p style="margin: 0;">© 2025 Your Company</p>
-        <p style="margin: 0;">Contact us: contact@yourcompany.com</p>
+        <p style="margin: 0;">© 2025 by 데이터에듀 신사업본</p>
+        <p style="margin: 0;">Contact us: jhp24228064@gmail.com</p>
     </div>
     """,
     unsafe_allow_html=True
 )
 
 
-st.subheader("모든 광고문의를 환영합니다. 퇴근도 환영합니다.")
