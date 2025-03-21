@@ -37,7 +37,7 @@ url4 = "https://blog.naver.com/dawafood-qubi"
 col3, col4 = st.columns(2)
 
 # 첫 번째 열에 URL1 임베딩
-with col2:
+with col3:
     st.subheader("📌 정담식당")
     
     # HTML을 활용하여 iframe 축소
