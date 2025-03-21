@@ -31,9 +31,9 @@ with col1:
     st.subheader("📌 정담식당")
     st.markdown(
         f"""
-         <div style="display: flex; justify-content: flex-start; overflow: hidden;">
+         <div style="display: flex; justify-content: center; overflow: hidden;">
             <iframe src="{url3}" width="600" height="1000" 
-                    style="transform: scale(0.8); transform-origin: lift;">
+                    style="transform: scale(0.8); transform-origin: center;">
             </iframe>
         </div>
         """,
