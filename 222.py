@@ -43,7 +43,7 @@ with col3:
     st.markdown(
         f"""
         <div style="width: 500px; height: 1000px;">
-            <iframe src="{url3}" width="600" height="1000" 
+            <iframe src="{url3}" width="500" height="1000" 
                     style="transform: scale(0.8); ">
             </iframe>
         </div>
@@ -57,7 +57,7 @@ with col4:
     st.markdown(
         f"""
         <div style="width: 500px; height: 1000px;">
-            <iframe src="{url4}" width="600" height="1000" 
+            <iframe src="{url4}" width="500" height="1000" 
                     style="transform: scale(0.8); ">
             </iframe>
         </div>
