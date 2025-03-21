@@ -45,7 +45,7 @@ with col3:
     st.markdown(
         f"""
         <div style="display: flex; justify-content: center; align-items: center; overflow: hidden; width: 800px; height: 480px;">
-            <iframe src="{url3}" width="1250" height="750" 
+            <iframe src="{url3}" width="600" height="1000" 
                     style="transform: scale(0.8); transform-origin: center;">
             </iframe>
         </div>
