@@ -71,7 +71,7 @@ if st.button("오늘의 메뉴 추천", disabled=st.session_state.button_clicked
     st.subheader(f"오늘의 메뉴는: {random_restaurant} 입니다‼️ 맛점하세용")
 
 
-
+st.subheader("\n")
 # 저장 파일 경로
 SAVE_FILE = "saved_urls.json"
 
