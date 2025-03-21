@@ -30,13 +30,14 @@ with col1:
     components.iframe(url1, height=600, width=1000)
     st.subheader("📌 만나")
     st.markdown(f"""
-         <div style="display: flex; justify-content: center; align-items: flex-start; width:100%; overflow: hidden;">
-            <iframe src="{url3}" width= "650" height="700" 
-                    style="transform: scale(1); transform-origin: center;">
-            </iframe>
-        </div>
-        """,
-        unsafe_allow_html=True
+            f"""
+     <div style="width: 650px; height: 700px; overflow: hidden;">
+         <iframe src="{url3}" width="650" height="700" 
+                 style="transform: scale(0.7); transform-origin: 0 0;">
+         </iframe>
+     </div>
+     """,
+     unsafe_allow_html=True
     )  
 
 # 두 번째 열에 URL2 임베딩
