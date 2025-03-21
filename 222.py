@@ -40,8 +40,6 @@ col3, col4 = st.columns(2)
 # 첫 번째 열에 URL1 임베딩
 with col3:
     st.subheader("📌 정담식당")
-    
-    # HTML을 활용하여 iframe 축소
     st.markdown(
         f"""
         <div style="overflow: hidden; width: 400px; height: 1000px;">
