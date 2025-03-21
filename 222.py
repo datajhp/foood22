@@ -187,7 +187,7 @@ st.markdown(
         이 자리는 광고 공간입니다. **광고를 게재하려면 여기를 클릭**하세요!<br>
         문의사항과 가치있는 개발 아이디어도 보내주세요! 
         <br>
-        <a href="https://open.kakao.com/o/sTv70Umh" target="_blank" style="color: #4CAF50; text-decoration: none;">광고 자세히 보기</a>
+        <a href="https://open.kakao.com/o/sTv70Umh" target="_blank" style="color: #4CAF50; text-decoration: none;">광고 및 문의하기</a>
     </div>
     """,
     unsafe_allow_html=True
