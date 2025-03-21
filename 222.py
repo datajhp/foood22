@@ -33,7 +33,7 @@ with col1:
         f"""
          <div style="display: flex; justify-content: flex-start; overflow: hidden;">
             <iframe src="{url3}" width="600" height="1000" 
-                    style="transform: scale(0.8); transform-origin: center;">
+                    style="transform: scale(0.8); transform-origin: lift;">
             </iframe>
         </div>
         """,
