@@ -10,6 +10,20 @@ import datetime
 import random
 
 
+st.markdown(
+    """
+    <style>
+    .reportview-container .main .block-container {
+        max-width: 1200px;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 # 카카오톡 채널 임베딩
 today_date = datetime.date.today()
 st.title(f"🍽️{today_date} 오늘의 메뉴's🍽️")
