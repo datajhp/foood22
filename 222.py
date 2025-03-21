@@ -43,7 +43,7 @@ with col3:
     # HTML을 활용하여 iframe 축소
     st.markdown(
         f"""
-        <div style="overflow: hidden; width: 800px; height: 480px;">
+        <div style="display: flex; justify-content: center; align-items: center; overflow: hidden; width: 800px; height: 480px;">
             <iframe src="{url3}" width="1250" height="750" 
                     style="transform: scale(0.8); transform-origin: center;">
             </iframe>
