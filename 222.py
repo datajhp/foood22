@@ -62,7 +62,7 @@ with col2:
 if "button_clicked" not in st.session_state:
     st.session_state.button_clicked = False    
 # 랜덤 식당 추천
-if st.button("준형인턴의 오늘의 메뉴 추천", disabled=st.session_state.button_clicked):
+if st.button("준형인턴's 오늘의 메뉴 추천", disabled=st.session_state.button_clicked):
     st.session_state.button_clicked = True
     restaurants = ["🍽️슈마우스만찬🍽️","🍽️슈마우스만찬🍽️","🍽️슈마우스만찬🍽️","🍽️슈마우스만찬🍽️","🍽️슈마우스만찬🍽️","🍽️정담식당🍽️", "🍽️정담식당🍽️","🍽️정담식당🍽️","🍽️정담식당🍽️","굶기"]
     random_restaurant = random.choice(restaurants)
