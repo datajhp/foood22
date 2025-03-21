@@ -49,8 +49,8 @@ with col2:
     st.markdown(
             f"""
      <div style="width: 650px; height: 700px; overflow: hidden;">
-         <iframe src="{url4}" width="650" height="1200" 
-                 style="transform: scale(0.55); transform-origin: 0 0;">
+         <iframe src="{url4}" width="800" height="1500" 
+                 style="transform: scale(0.44); transform-origin: 0 0;">
          </iframe>
      </div>
      """,
