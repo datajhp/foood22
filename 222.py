@@ -17,6 +17,9 @@ st.title(f"🍽️{today_date} 오늘의 메뉴's🍽️")
 # 카카오톡 채널 URL 2개
 url1 = "https://pf.kakao.com/_CiVis/posts"
 url2 = "https://pf.kakao.com/_vKxgdn/posts"
+url3 = "https://blog.naver.com/PostList.nhn?blogId=jusik1606&from=postList&categoryNo=6"
+url4 = "https://blog.naver.com/dawafood-qubi"
+
 
 # 2개의 열로 나누기
 col1, col2 = st.columns(2)
@@ -25,20 +28,6 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader("📌 슈마우스만찬")
     components.iframe(url1, height=600, width=1000)
-
-# 두 번째 열에 URL2 임베딩
-with col2:
-    st.subheader("     📌 정담식당")
-    components.iframe(url2, height=600, width=1000)
-
-url3 = "https://blog.naver.com/PostList.nhn?blogId=jusik1606&from=postList&categoryNo=6"
-url4 = "https://blog.naver.com/dawafood-qubi"
-
-# 2개의 열로 나누기
-col3, col4 = st.columns(2)
-
-# 첫 번째 열에 URL1 임베딩
-with col3:
     st.subheader("📌 정담식당")
     st.markdown(
         f"""
@@ -49,10 +38,12 @@ with col3:
         </div>
         """,
         unsafe_allow_html=True
-    )    
+    )  
 
 # 두 번째 열에 URL2 임베딩
-with col4:
+with col2:
+    st.subheader("     📌 정담식당")
+    components.iframe(url2, height=600, width=1000)
     st.subheader("     📌 다와푸드 큐비")
     st.markdown(
         f"""
