@@ -23,12 +23,12 @@ col1, col2 = st.columns(2)
 # 첫 번째 열에 URL1 임베딩
 with col1:
     st.subheader("📌 슈마우스만찬")
-    components.v1.iframe(url1, height=600, width=1000)
+    components.iframe(url1, height=600, width=1000)
 
 # 두 번째 열에 URL2 임베딩
 with col2:
     st.subheader("     📌 정담식당")
-    components.v1.iframe(url2, height=600, width=1000)
+    components.iframe(url2, height=600, width=1000)
     
 # 랜덤 식당 추천
 if st.button("오늘의 메뉴 추천"):
