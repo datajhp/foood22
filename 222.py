@@ -42,7 +42,7 @@ with col3:
     st.subheader("📌 정담식당")
     st.markdown(
         f"""
-        <div style="overflow: hidden; width: 500px; height: 1000px;">
+        <div style="width: 500px; height: 1000px;">
             <iframe src="{url3}" width="600" height="1000" 
                     style="transform: scale(0.8); transform-origin: center;">
             </iframe>
@@ -56,7 +56,7 @@ with col4:
     st.subheader("     📌 다와푸드 큐비")
     st.markdown(
         f"""
-        <div style="overflow: hidden; width: 500px; height: 1000px;">
+        <div style="width: 500px; height: 1000px;">
             <iframe src="{url4}" width="600" height="1000" 
                     style="transform: scale(0.8); transform-origin: center;">
             </iframe>
