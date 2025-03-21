@@ -184,7 +184,7 @@ st.write("이 페이지는 하단에 정보를 추가한 예시입니다.")
 # 하단 정보 영역
 st.markdown(
     """
-    <div style="position: fixed; bottom: 0; width: 100%; background-color: #f1f1f1; text-align: center; padding: 10px 0;">
+    <div style="position: fixed; bottom: 0; width: 50%; background-color: #f1f1f1; text-align: center; padding: 10px 0;">
         <p style="margin: 0; font-size: 14px; color: #555;">© 2025 Your Company | All Rights Reserved</p>
         <p style="margin: 0; font-size: 12px; color: #888;">Contact us: contact@yourcompany.com</p>
     </div>
