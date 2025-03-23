@@ -31,6 +31,14 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader("📌 슈마우스만찬")
     components.iframe(url1, height=600, width=1000)
+# 두 번째 열에 URL2 임베딩
+with col2:
+    st.subheader("     📌 정담식당")
+    components.iframe(url2, height=600, width=1000)
+    st.subheader("     📌 다와푸드 큐비")
+
+col3, col4 = st.columns(2)
+with col3:
     st.subheader("📌 만나")
     st.markdown(
         f"""
@@ -42,11 +50,7 @@ with col1:
      """,
      unsafe_allow_html=True
     )  
-
-# 두 번째 열에 URL2 임베딩
-with col2:
-    st.subheader("     📌 정담식당")
-    components.iframe(url2, height=600, width=1000)
+with col4:
     st.subheader("     📌 다와푸드 큐비")
     st.markdown(
             f"""
