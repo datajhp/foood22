@@ -8,11 +8,13 @@ from pathlib import Path
 import streamlit.components.v1 as components
 import datetime
 import random
+import pytz
 
 st.set_page_config(page_title="오늘의 메뉴's",page_icon="🍴")
 
-# 카카오톡 채널 임베딩
-today_date = datetime.date.today()
+kst = pytz.timezone('Asia/Seoul')
+now_kst = datetime.datetime.now(kst)
+today_date = now_kst.date()
 
 st.title("🍽️오늘의 메뉴's🍽️")
 st.subheader(f"{today_date}")
