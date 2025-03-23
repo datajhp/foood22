@@ -16,7 +16,8 @@ today_date = datetime.date.today()
 
 st.title("🍽️오늘의 메뉴's🍽️")
 st.subheader(f"{today_date}")
-
+if st.button("📅 날짜 새로고침"):
+    st.experimental_rerun()
 
 # 카카오톡 채널 URL 2개
 url1 = "https://pf.kakao.com/_CiVis/posts"
