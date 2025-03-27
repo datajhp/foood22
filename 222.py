@@ -169,10 +169,11 @@ st.markdown(f"""
     box-shadow:2px 2px 5px rgba(0,0,0,0.1);
     color: #f5f5f5;
     '>
-    <h4 style='margin-bottom:10px;'>🍽️ {selected_post['restaurant']}</h4>
-    <p style='margin-bottom:8px;'><strong>작성자:</strong> {selected_post['title']}</p>
-    <p></p>
-    <p style='white-space: pre-wrap;'>{selected_post['content']}</p>
+    <div style='display: flex; justify-content: space-between; align-items: center;'>
+        <h4 style='margin:0;'>🍽️ {selected_post['restaurant']}</h4>
+        <p style='margin:0;'><strong>작성자:</strong> {selected_post['title']}</p>
+    </div>
+    <p style='white-space: pre-wrap; margin-top:10px;'>{selected_post['content']}</p>
 </div>
 """, unsafe_allow_html=True)
 
