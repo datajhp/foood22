@@ -151,7 +151,7 @@ posts = res.data if res.data else []  # 📌 게시글이 없을 경우 빈 리�
 
 # 📌 게시글이 있을 때만 목록 표시
 if posts:
-    post_titles = [f"{p['restaurant']}리뷰 - 작성자: {p['title']} ({p['created_at'][:10]})" for p in posts]
+    post_titles = [f"{p['restaurant']} 리뷰 - 작성자: {p['title']} ({p['created_at'][:10]})" for p in posts]
     post_map = {title: p for title, p in zip(post_titles, posts)}
 
     st.markdown("### 📄 리뷰 게시글 목록")
@@ -173,7 +173,7 @@ if selected_post:
         color: #f5f5f5;
         '>
         <div style='display: flex; justify-content: space-between; align-items: center;'>
-            <h4 style='margin:0;'>🍽️ {selected_post['restaurant']}</h4>
+            <h4 style='margin:0;'>🍽️ {selected_post['restaurant']} 리뷰</h4>
             <p style='margin:0;'><strong>작성자:</strong> {selected_post['title']}</p>
         </div>
         <p style='white-space: pre-wrap; margin-top:10px;'>{selected_post['content']}</p>
