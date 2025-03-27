@@ -199,6 +199,7 @@ for c in comment_res.data:
     st.markdown(f"""
     <div style='
         border:1px solid #444;
+        border-radius:10px;
         padding:10px;
         margin:5px 0;
         background-color:#2c2c2a;
