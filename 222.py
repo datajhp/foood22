@@ -141,27 +141,25 @@ st.markdown("<h1 style='text-align:center; color:#4A90E2;'>📋 커뮤니티 게
 st.markdown("---")
 
 RESTAURANT_LIST = [
-    "정담식당",
     "슈마우스",
+    "정담식당",
     "Others"
 ]
 
 res = supabase.table("posts").select("*").order("id", desc=True).execute()
 posts = res.data if res.data else []  # 📌 게시글이 없을 경우 빈 리스트
 
-# 📌 게시글이 있을 때만 selectbox 표시
+# 📌 게시글이 있을 때만 목록 표시
 if posts:
     post_titles = [f"{p['restaurant']}리뷰 - 작성자: {p['title']} ({p['created_at'][:10]})" for p in posts]
     post_map = {title: p for title, p in zip(post_titles, posts)}
 
-    # ✅ 5개의 selectbox (게시글이 부족하면 반복)
-    selected_titles = [
-        st.selectbox(f"게시글 선택 {i+1}", post_titles, index=0 if len(post_titles) > 0 else None, key=f"select_{i}")
-        for i in range(min(5, len(post_titles)))  # 📌 게시글 개수만큼 selectbox 생성
-    ]
+    st.markdown("### 📄 리뷰 게시글 목록")
+    # 📌 목록 형태로 게시글 제목을 나열하고, 클릭하면 해당 내용 표시
+    selected_title = st.selectbox("게시글을 선택하세요:", post_titles)
 
-    # ✅ 선택된 첫 번째 게시글 표시
-    selected_post = post_map.get(selected_titles[0], None)
+    # ✅ 선택한 게시글 데이터 가져오기
+    selected_post = post_map.get(selected_title)
 
     if selected_post:
         st.markdown(f"""
