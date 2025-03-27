@@ -155,7 +155,9 @@ post_titles = [f"{p['restaurant']}리뷰 - 작성자: {p['title']} ({p['created_
 post_map = {title: p for title, p in zip(post_titles, posts)}
 
 st.markdown("### 📄 리뷰 게시글")
-selected_title = st.selectbox("목록:", post_titles)
+selected_titles = [
+    st.selectbox(f"게시글 선택 {i+1}", post_titles, key=f"select_{i}") for i in range(5)
+]
 
 # 선택된 게시글 데이터 가져오기
 selected_post = post_map[selected_title]
