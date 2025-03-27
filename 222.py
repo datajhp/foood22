@@ -170,8 +170,6 @@ st.markdown(f"""
     color: #f5f5f5;
     display: flex;
     justify-content: space-between;
-    <span>🍽️ None</span>
-    <span>작성자: 박준형</span
 '>
     <h4 style='margin-bottom:10px;'>🍽️ {selected_post['restaurant']}</h4>
     <p style='margin-bottom:8px;'><strong>작성자:</strong> {selected_post['title']}</p>
