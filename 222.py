@@ -152,7 +152,7 @@ posts = res.data
 
 # 게시글 목록에서 선택
 post_titles = [f"{p['restaurant']}리뷰 - 작성자: {p['title']} ({p['created_at'][:10]})" for p in posts]
-post_map = {f"{p['restaurant']}리뷰 - 작성자: {p['title']} ({p['created_at'][:10]})": p for p in posts}
+post_map = {title: p for title, p in zip(post_titles, posts)}
 
 st.markdown("### 📄 리뷰 게시글")
 selected_title = st.selectbox("목록:", post_titles)
