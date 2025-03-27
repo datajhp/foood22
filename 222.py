@@ -180,8 +180,6 @@ if posts:
 
 else:
     st.warning("현재 게시글이 없습니다. 새로운 게시글을 작성해 주세요!")
-else:
-    st.warning("현재 게시글이 없습니다. 새로운 게시글을 작성해 주세요!")
 
 # ❤️ 좋아요 버튼
 current_likes = selected_post.get("likes") or 0
