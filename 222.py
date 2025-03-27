@@ -151,7 +151,7 @@ res = supabase.table("posts").select("*").order("id", desc=True).execute()
 posts = res.data
 
 # 게시글 목록에서 선택
-post_titles = [f"{p['restaurant']}-{p['title']} ({p['created_at'][:10]})" for p in posts]
+post_titles = [f"{p['restaurant']} 리뷰 - 다녀온사람: {p['title']} ({p['created_at'][:10]})" for p in posts]
 post_map = {f"{p['restaurant']}-{p['title']} ({p['created_at'][:10]})": p for p in posts}
 
 st.markdown("### 📄 리뷰 게시글")
