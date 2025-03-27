@@ -193,8 +193,6 @@ if selected_post:
     </div>
     """, unsafe_allow_html=True)
     
-    # 좋아요 버튼 클릭 시 처리
-    current_likes = selected_post.get("likes", 0)
 
     # 좋아요 버튼 클릭 시 처리
 if st.button(f"❤️ {current_likes}", key=f"like_{selected_post['id']}"):
