@@ -175,23 +175,25 @@ col_1, col_2 = st.columns([3,7])
 with col_1:
 # 댓글 목록 표시
     st.markdown("### 📚 댓글 목록")
-    comment_res = supabase.table("comments").select("*") \
-        .eq("post_id", selected_post["id"]).order("id", desc=False).execute()
-
-    for c in comment_res.data:
-        st.markdown(f"""
-        <div style='
-            padding:10px;
-            margin:5px 0;
-            background-color:#0000;
-            border-radius:6px;
-        '>
-            <p style='margin-bottom:2px;'>{c['content']}</p>
-            <div style='font-size:11px; color:#888;'>작성일: {c['created_at'][:19].replace('T', ' ')}</div>
-        </div>
-        """, unsafe_allow_html=True)
+    
 with col_2:
     st.markdown("---")
+    
+comment_res = supabase.table("comments").select("*") \
+    .eq("post_id", selected_post["id"]).order("id", desc=False).execute()
+
+for c in comment_res.data:
+    st.markdown(f"""
+    <div style='
+        padding:10px;
+        margin:5px 0;
+        background-color:#0000;
+            order-radius:6px;
+    '>
+        <p style='margin-bottom:2px;'>{c['content']}</p>
+        <div style='font-size:11px; color:#888;'>작성일: {c['created_at'][:19].replace('T', ' ')}</div>
+    </div>
+    """, unsafe_allow_html=True)
 st.markdown("---")
 
 # 댓글 입력창
