@@ -161,8 +161,10 @@ if posts:
     selected_post = post_map.get(selected_title)
 
 if selected_post:
-    # 게시글 내용과 좋아요 버튼을 flex로 나란히 배치
-    st.markdown(f"""
+    current_likes = selected_post.get("likes", 0)
+    
+    # 좋아요 버튼이 포함된 HTML 생성
+    post_html = f"""
     <div style='
         border:1px solid #444;
         border-radius:10px;
@@ -175,7 +177,6 @@ if selected_post:
         <div style='display: flex; justify-content: space-between; align-items: center;'>
             <h4 style='margin:0;'>🍽️ {selected_post['restaurant']}</h4>
             <p style='margin:0;'><strong>작성자:</strong> {selected_post['title']}</p>
-            <!-- 좋아요 버튼 추가 -->
             <button style='
                 padding: 8px 16px;
                 background-color: #ff6f61;
@@ -186,12 +187,16 @@ if selected_post:
                 font-size: 16px;
                 ' 
                 onclick="window.location.reload();">
-                ❤️ {selected_post.get('likes', 0)}
+                ❤️ {current_likes}
             </button>
         </div>
         <p style='white-space: pre-wrap; margin-top:10px;'>{selected_post['content']}</p>
     </div>
-    """, unsafe_allow_html=True)
+    """
+    
+    # 마크다운으로 출력
+    st.markdown(post_html, unsafe_allow_html=True)
+
     
 
     # 좋아요 버튼 클릭 시 처리
