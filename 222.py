@@ -187,7 +187,7 @@ for c in comment_res.data:
     <div style='
         padding:10px;
         margin:5px 0;
-        background-color:#0000;
+        background-color:#565750;
             order-radius:6px;
     '>
         <p style='margin-bottom:2px;'>{c['content']}</p>
