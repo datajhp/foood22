@@ -210,7 +210,7 @@ if st.button(f"❤️ {current_likes}", key=f"like_{selected_post['id']}"):
         else:
             st.error("좋아요 업데이트에 실패했습니다. 다시 시도해 주세요.")
 else:
-    st.warning("현재 게시글이 없습니다. 새로운 게시글을 작성해 주세요!"
+    st.warning("현재 게시글이 없습니다. 새로운 게시글을 작성해 주세요!")
 
 
 col_1, col_2 = st.columns([3,7])
