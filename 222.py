@@ -159,9 +159,22 @@ selected_title = st.selectbox("목록:", post_titles)
 
 # 선택된 게시글 데이터 가져오기
 selected_post = post_map[selected_title]
-st.write(f"식당: 🍽️{selected_post['restaurant']} / 작성자: {selected_post['title']}")
+st.markdown(f"""
+<div style='
+    border:1px solid #444;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+    background-color:#2c2c2a;
+    box-shadow:2px 2px 5px rgba(0,0,0,0.1);
+    color: #f5f5f5;
+'>
+    <h4 style='margin-bottom:10px;'>🍽️ {selected_post['restaurant']}</h4>
+    <p style='margin-bottom:8px;'><strong>작성자:</strong> {selected_post['title']}</p>
+    <p style='white-space: pre-wrap;'>{selected_post['content']}</p>
+</div>
+""", unsafe_allow_html=True)
 
-st.write(selected_post['content'])
 
 # ❤️ 좋아요 버튼
 current_likes = selected_post.get("likes") or 0
