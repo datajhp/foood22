@@ -199,12 +199,18 @@ if selected_post:
 
     
 
-    # 좋아요 버튼 클릭 시 처리
 if st.button(f"❤️ {current_likes}", key=f"like_{selected_post['id']}"):
-    supabase.table("posts").update({
-        "likes": current_likes + 1
-    }).eq("id", selected_post["id"]).execute()
-    st.rerun()
+        update_response = supabase.table("posts").update({
+            "likes": current_likes + 1
+        }).eq("id", selected_post["id"]).execute()
+
+        if update_response.status_code == 200:
+            st.success("좋아요가 추가되었습니다!")
+            st.rerun()
+        else:
+            st.error("좋아요 업데이트에 실패했습니다. 다시 시도해 주세요.")
+else:
+    st.warning("현재 게시글이 없습니다. 새로운 게시글을 작성해 주세요!"
 
 
 col_1, col_2 = st.columns([3,7])
