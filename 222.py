@@ -130,55 +130,6 @@ if default_url2 == "":
     default_url2 = "https://pf.kakao.com/_vKxgdn/108791400"
 
 
-
-# UI 구성
-st.subheader("<메뉴 이미지만 불러오기>")
-
-# 입력창 2개
-col_input1, col_input2 = st.columns(2)
-
-with col_input1:
-    url1 = st.text_input("슈마우스", value=default_url1)
-with col_input2:
-    url2 = st.text_input("정담", value=default_url2)
-
-# 버튼 클릭 시 동작
-if st.button("저장하고 이미지 가져오기"):
-    # URL 저장
-    save_urls(url1, url2)
-
-    col_img1, col_img2 = st.columns(2)
-
-    # URL 1 처리
-    with st.spinner("URL 1 처리 중..."):
-        img_url1 = get_og_image(url1)
-        with col_img1:
-            st.subheader("URL 1")
-            if img_url1:
-                img1 = load_image_from_url(img_url1)
-                if img1:
-                    st.image(img1, caption="🍽️슈마우스", width=350)
-                    st.caption(f"[{img_url1}]({img_url1})")
-                else:
-                    st.warning("아직 메뉴가 공지되지 않았습니다.")
-            else:
-                st.warning("아직 메뉴가 공지되지 않았습니다.")
-
-    # URL 2 처리
-    with st.spinner("URL 2 처리 중..."):
-        img_url2 = get_og_image(url2)
-        with col_img2:
-            st.subheader("URL 2")
-            if img_url2:
-                img2 = load_image_from_url(img_url2)
-                if img2:
-                    st.image(img2, caption="🍽️정담식당", width=300)
-                    st.caption(f"[{img_url2}]({img_url2})")
-                else:
-                    st.warning("🍽️아직 메뉴가 공지되지 않았습니다.")
-            else:
-                st.warning("🍽️아직 메뉴가 공지되지 않았습니다.")
-
 from supabase import create_client, Client
 
 # Supabase 연결 정보
@@ -271,7 +222,54 @@ if st.button("📤 글 등록하기"):
         st.rerun()
     else:
         st.warning("작성자, 식당, 내용을 모두 입력해주세요.")
+st.markdown("---")
+# UI 구성
+st.subheader("<메뉴 이미지만 불러오기>")
 
+# 입력창 2개
+col_input1, col_input2 = st.columns(2)
+
+with col_input1:
+    url1 = st.text_input("슈마우스", value=default_url1)
+with col_input2:
+    url2 = st.text_input("정담", value=default_url2)
+
+# 버튼 클릭 시 동작
+if st.button("저장하고 이미지 가져오기"):
+    # URL 저장
+    save_urls(url1, url2)
+
+    col_img1, col_img2 = st.columns(2)
+
+    # URL 1 처리
+    with st.spinner("URL 1 처리 중..."):
+        img_url1 = get_og_image(url1)
+        with col_img1:
+            st.subheader("URL 1")
+            if img_url1:
+                img1 = load_image_from_url(img_url1)
+                if img1:
+                    st.image(img1, caption="🍽️슈마우스", width=350)
+                    st.caption(f"[{img_url1}]({img_url1})")
+                else:
+                    st.warning("아직 메뉴가 공지되지 않았습니다.")
+            else:
+                st.warning("아직 메뉴가 공지되지 않았습니다.")
+
+    # URL 2 처리
+    with st.spinner("URL 2 처리 중..."):
+        img_url2 = get_og_image(url2)
+        with col_img2:
+            st.subheader("URL 2")
+            if img_url2:
+                img2 = load_image_from_url(img_url2)
+                if img2:
+                    st.image(img2, caption="🍽️정담식당", width=300)
+                    st.caption(f"[{img_url2}]({img_url2})")
+                else:
+                    st.warning("🍽️아직 메뉴가 공지되지 않았습니다.")
+            else:
+                st.warning("🍽️아직 메뉴가 공지되지 않았습니다.")
 
 st.write("\n")
 st.write("\n")
@@ -302,6 +300,8 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+
 # 페이지 내용
-st.write("📞모든 광고문의를 환영합니다📞 🏠퇴근도 환영합니다🏠 ☕커피 환영합니다☕")
+st.write("🏠퇴근도 환영합니다🏠📞모든 광고문의를 환영합니다📞☕커피 환영합니다☕")
 
