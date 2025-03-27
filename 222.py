@@ -171,6 +171,7 @@ st.markdown(f"""
 '>
     <h4 style='margin-bottom:10px;'>🍽️ {selected_post['restaurant']}</h4>
     <p style='margin-bottom:8px;'><strong>작성자:</strong> {selected_post['title']}</p>
+    <p></p>
     <p style='white-space: pre-wrap;'>{selected_post['content']}</p>
 </div>
 """, unsafe_allow_html=True)
