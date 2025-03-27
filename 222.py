@@ -180,22 +180,23 @@ if selected_post:
     </div>
     """, unsafe_allow_html=True)
 
-    # ❤️ 좋아요 버튼
+# ❤️ 좋아요 버튼을 마크다운 안에 표시
     current_likes = selected_post.get("likes", 0)  # likes가 없으면 기본값 0으로 설정
-    if st.button(f"❤️ {current_likes}", key=f"like_{selected_post['id']}"):
-        # 좋아요 업데이트
-        update_response = supabase.table("posts").update({
-            "likes": current_likes + 1
-        }).eq("id", selected_post["id"]).execute()
+    st.markdown(f"""
+    <div style='text-align:center; margin-top:20px;'>
+        <button style='padding:10px 20px; background-color:#4CAF50; color:white; border:none; border-radius:5px; cursor:pointer;' 
+                onclick="window.location.reload();">
+            ❤️ {current_likes}
+        </button>
+    </div>
+    """, unsafe_allow_html=True)
 
-        # 업데이트가 정상적으로 이루어졌는지 확인
-        if update_response.status_code == 200:
-            st.success("좋아요가 추가되었습니다!")
-            st.rerun()  # 페이지를 리로드하여 상태 갱신
-        else:
-            st.error("좋아요 업데이트에 실패했습니다. 다시 시도해 주세요.")
-else:
-    st.warning("현재 게시글이 없습니다. 새로운 게시글을 작성해 주세요!")
+    # 좋아요 버튼 클릭 시 처리
+if st.button(f"❤️ {current_likes}", key=f"like_{selected_post['id']}"):
+    supabase.table("posts").update({
+        "likes": current_likes + 1
+    }).eq("id", selected_post["id"]).execute()
+    st.rerun()
 
 
 col_1, col_2 = st.columns([3,7])
