@@ -5,3 +5,4 @@ webdriver-manager
 notion-client
 datetime
 pytz
+supabase
