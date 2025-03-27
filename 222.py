@@ -155,31 +155,31 @@ if posts:
     post_map = {title: p for title, p in zip(post_titles, posts)}
 
     st.markdown("### 📄 리뷰 게시글 목록")
-    # 📌 목록 형태로 게시글 제목을 나열하고, 클릭하면 해당 내용 표시
-    selected_title = st.selectbox("게시글을 선택하세요:", post_titles)
+    for title in post_titles:
+        if st.button(title):  # 제목을 클릭하면 게시글 표시
+            selected_post = post_map[title]
 
-    # ✅ 선택한 게시글 데이터 가져오기
-    selected_post = post_map.get(selected_title)
-
-    if selected_post:
-        st.markdown(f"""
-        <div style='
-            border:1px solid #444;
-            border-radius:10px;
-            padding:20px;
-            margin-bottom:20px;
-            background-color:#2c2c2a;
-            box-shadow:2px 2px 5px rgba(0,0,0,0.1);
-            color: #f5f5f5;
-            '>
-            <div style='display: flex; justify-content: space-between; align-items: center;'>
-                <h4 style='margin:0;'>🍽️ {selected_post['restaurant']}</h4>
-                <p style='margin:0;'><strong>작성자:</strong> {selected_post['title']}</p>
+            st.markdown(f"""
+            <div style='
+                border:1px solid #444;
+                border-radius:10px;
+                padding:20px;
+                margin-bottom:20px;
+                background-color:#2c2c2a;
+                box-shadow:2px 2px 5px rgba(0,0,0,0.1);
+                color: #f5f5f5;
+                '>
+                <div style='display: flex; justify-content: space-between; align-items: center;'>
+                    <h4 style='margin:0;'>🍽️ {selected_post['restaurant']}</h4>
+                    <p style='margin:0;'><strong>작성자:</strong> {selected_post['title']}</p>
+                </div>
+                <p style='white-space: pre-wrap; margin-top:10px;'>{selected_post['content']}</p>
             </div>
-            <p style='white-space: pre-wrap; margin-top:10px;'>{selected_post['content']}</p>
-        </div>
-        """, unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
+            break  # 첫 번째로 클릭된 게시글만 표시
 
+else:
+    st.warning("현재 게시글이 없습니다. 새로운 게시글을 작성해 주세요!")
 else:
     st.warning("현재 게시글이 없습니다. 새로운 게시글을 작성해 주세요!")
 
