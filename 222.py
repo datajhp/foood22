@@ -161,10 +161,8 @@ if posts:
     selected_post = post_map.get(selected_title)
 
 if selected_post:
-    current_likes = selected_post.get("likes", 0)
-    
-    # 좋아요 버튼이 포함된 HTML 생성
-    post_html = f"""
+    # 게시글 내용 표시
+    st.markdown(f"""
     <div style='
         border:1px solid #444;
         border-radius:10px;
@@ -177,40 +175,32 @@ if selected_post:
         <div style='display: flex; justify-content: space-between; align-items: center;'>
             <h4 style='margin:0;'>🍽️ {selected_post['restaurant']}</h4>
             <p style='margin:0;'><strong>작성자:</strong> {selected_post['title']}</p>
-            <button style='
-                padding: 8px 16px;
-                background-color: #ff6f61;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 16px;
-                ' 
-                onclick="window.location.reload();">
-                ❤️ {current_likes}
-            </button>
         </div>
         <p style='white-space: pre-wrap; margin-top:10px;'>{selected_post['content']}</p>
     </div>
-    """
-    
-    # 마크다운으로 출력
-    st.markdown(post_html, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
-    
+    # ❤️ 좋아요 버튼 (Streamlit 버튼 사용)
+    current_likes = selected_post.get("likes", 0)  # likes가 없으면 기본값 0으로 설정
+    like_button = st.button(f"❤️ {current_likes}", key=f"like_{selected_post['id']}")
 
-if st.button(f"❤️ {current_likes}", key=f"like_{selected_post['id']}"):
+    if like_button:
+        # 좋아요 수 업데이트
         update_response = supabase.table("posts").update({
             "likes": current_likes + 1
         }).eq("id", selected_post["id"]).execute()
 
+        # 업데이트가 정상적으로 이루어졌는지 확인
         if update_response.status_code == 200:
             st.success("좋아요가 추가되었습니다!")
-            st.rerun()
+            st.rerun()  # 페이지를 리프레시하여 상태 갱신
         else:
             st.error("좋아요 업데이트에 실패했습니다. 다시 시도해 주세요.")
 else:
     st.warning("현재 게시글이 없습니다. 새로운 게시글을 작성해 주세요!")
+
+    
+
 
 
 col_1, col_2 = st.columns([3,7])
