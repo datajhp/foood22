@@ -1,5 +1,4 @@
 streamlit
-git+https://github.com/okld/streamlit-image-carousel.git
 selenium
 beautifulsoup4
 webdriver-manager
