@@ -335,7 +335,7 @@ st.write("<<☕커피 환영합니다☕📞모든 광고문의를 환영합니�
 
 
 
-image_carousel(["1111.png", "2222.png", "3333.png"])
+image_carousel(["https://raw.githubusercontent.com/datajhp/foood22/main/1111.png", "https://raw.githubusercontent.com/datajhp/foood22/main/2222.png", "https://raw.githubusercontent.com/datajhp/foood22/main/3333.png"])
 
 
 
