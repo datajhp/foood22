@@ -9,7 +9,7 @@ import streamlit.components.v1 as components
 import datetime
 import random
 import pytz
-from streamlit_image_carousel import image_carousel
+import streamlit.components.v1 as components
 
 st.set_page_config(page_title="오늘의 메뉴's",page_icon="🍴")
 
@@ -334,7 +334,7 @@ st.markdown(
 st.write("<<☕커피 환영합니다☕📞모든 광고문의를 환영합니다📞🏠퇴근도 환영합니다🏠>>")
 
 
-import streamlit.components.v1 as components
+
 
 components.html("""
 <div class="slider">
