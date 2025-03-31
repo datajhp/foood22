@@ -6,3 +6,4 @@ notion-client
 datetime
 pytz
 supabase
+streamlit-image-carousel
