@@ -6,4 +6,4 @@ notion-client
 datetime
 pytz
 supabase
-streamlit-image-carousel
+git+https://github.com/okld/streamlit-image-carousel.git
