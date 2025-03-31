@@ -1,4 +1,5 @@
 streamlit
+git+https://github.com/okld/streamlit-image-carousel.git
 selenium
 beautifulsoup4
 webdriver-manager
@@ -6,4 +7,4 @@ notion-client
 datetime
 pytz
 supabase
-git+https://github.com/okld/streamlit-image-carousel.git
+
