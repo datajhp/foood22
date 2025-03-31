@@ -334,12 +334,30 @@ st.markdown(
 st.write("<<☕커피 환영합니다☕📞모든 광고문의를 환영합니다📞🏠퇴근도 환영합니다🏠>>")
 
 
-image_urls = [
-    "https://raw.githubusercontent.com/datajhp/foood22/main/1111.png",
-    "https://raw.githubusercontent.com/datajhp/foood22/main/2222.png",
-    "https://raw.githubusercontent.com/datajhp/foood22/main/3333.png"
-]
+import streamlit.components.v1 as components
 
-image_carousel(image_urls, width=600, height=400)
+components.html("""
+<div class="slider">
+  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/1111.png" width="100%">
+  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/2222.png" width="100%">
+  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/3333.png" width="100%">
+</div>
+<style>
+.slider {
+  display: flex;
+  overflow: hidden;
+  width: 600px;
+}
+.slider img {
+  animation: slide 9s infinite;
+}
+@keyframes slide {
+  0% {transform: translateX(0%);}
+  33% {transform: translateX(-100%);}
+  66% {transform: translateX(-200%);}
+  100% {transform: translateX(0%);}
+}
+</style>
+""", height=400)
 
 
