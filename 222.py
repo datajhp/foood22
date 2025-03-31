@@ -358,6 +358,6 @@ components.html("""
   100% {transform: translateX(0%);}
 }
 </style>
-""", height=400)
+""", height=500)
 
 
