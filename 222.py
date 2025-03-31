@@ -321,7 +321,7 @@ st.markdown(
    """
     <div style="position: fixed; bottom: 10px; right: 10px; background-color: #000000; color: #FFFFFF; 
                 padding: 10px 20px; border-radius: 5px; font-size: 12px; z-index: 1000;">
-        <p style="margin: 0;">© 2025 by 데이터에듀 신사업본</p>
+        <p style="margin: 0;">© 2025 by 데이터에듀 신사업본부</p>
         <p style="margin: 0;">Contact us: jhp24228064@gmail.com</p>
     </div>
     """,
@@ -330,5 +330,5 @@ st.markdown(
 
 
 # 페이지 내용
-st.write("🏠퇴근도 환영합니다🏠📞모든 광고문의를 환영합니다📞☕커피 환영합니다☕")
+st.write("<<☕커피 환영합니다☕📞모든 광고문의를 환영합니다📞🏠퇴근도 환영합니다🏠>>")
 
