@@ -143,7 +143,10 @@ st.markdown("---")
 RESTAURANT_LIST = [
     "슈마우스",
     "정담식당",
-    "Others"
+    "만나",
+    "다와푸드 큐비",
+    "Others",
+    "추천 식당"
 ]
 
 res = supabase.table("posts").select("*").order("id", desc=True).execute()
