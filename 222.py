@@ -9,6 +9,7 @@ import streamlit.components.v1 as components
 import datetime
 import random
 import pytz
+from streamlit_image_carousel import image_carousel
 
 st.set_page_config(page_title="오늘의 메뉴's",page_icon="🍴")
 
