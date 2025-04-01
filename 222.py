@@ -346,7 +346,7 @@ components.html("""
 .slider {
   display: flex;
   overflow: hidden;
-  width: 800px;
+  width: 900px;
 }
 .slider img {
   animation: slide 9s infinite;
