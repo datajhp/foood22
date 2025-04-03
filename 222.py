@@ -20,6 +20,33 @@ today_date = now_kst.date()
 st.title("🍽️오늘의 메뉴's🍽️")
 st.subheader(f"{today_date}")
 
+# 날짜 및 요일 추출
+today_date = now_kst.date()
+weekday = now_kst.weekday()  # 0: 월요일, ..., 6: 일요일
+weekday_kor = ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'][weekday]
+
+# 주말까지 남은 일수 계산
+if weekday < 5:
+    days_left = 5 - weekday  # 토요일이 주말 기준
+    weekend_msg = f"주말까지 {days_left}일 남았습니다. 힘내세요!"
+else:
+    weekend_msg = "주말입니다! 푹 쉬세요 😊"
+
+# 퇴근 시간 계산 (18:00)
+work_end = now_kst.replace(hour=18, minute=0, second=0, microsecond=0)
+
+if now_kst < work_end:
+    time_left = work_end - now_kst
+    hours, remainder = divmod(time_left.seconds, 3600)
+    minutes = remainder // 60
+    work_msg = f"퇴근까지 {hours}시간 {minutes}분 남았습니다!"
+else:
+    work_msg = "오늘도 고생 많으셨어요! 퇴근 시간입니다 🎉"
+
+# 출력
+st.write(f"오늘은 {today_date} ({weekday_kor})입니다.")
+st.success(weekend_msg)
+st.info(work_msg)
 
 # 카카오톡 채널 URL 2개
 url1 = "https://pf.kakao.com/_CiVis/posts"
