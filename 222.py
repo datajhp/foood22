@@ -99,7 +99,7 @@ if "button_clicked" not in st.session_state:
 # 랜덤 식당 추천
 if st.button("준형인턴's 오늘의 메뉴 추천", disabled=st.session_state.button_clicked):
     st.session_state.button_clicked = True
-    restaurants = ["🍽️슈마우스만찬🍽️","🍽️슈마우스만찬🍽️","🍽️슈마우스만찬🍽️","🍽️슈마우스만찬🍽️","🍽️슈마우스만찬🍽️","🍽️정담식당🍽️", "🍽️정담식당🍽️","🍽️정담식당🍽️","🍽️정담식당🍽️","굶기"]
+    restaurants = ["🍽️슈마우스🍽️","🍽️슈마우스🍽️","🍽️수영강 산책🍽️","🍽️샐픽 샌드위치🍽️","🍽️서브웨이 다이어트 메뉴🍽️","🍽️정담🍽️", "🍽️정담🍽️","🍽️개미집🍽️","🍽️명동 찌개🍽️","🍽️동동 국밥🍽️","🍽️동경규동🍽️",🍽️샐러바웃🍽️",🍽️차이밍🍽️","굶기"]
     random_restaurant = random.choice(restaurants)
 # 랜덤 추천 식당 표시
     st.subheader(f"결정이 힘든 당신..")
