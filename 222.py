@@ -288,7 +288,7 @@ st.markdown(
 
 components.html("""
 <div class="slider">
-  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/1111.png" width="60%">
+  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/1111.png" width="200%">
   <img src="https://raw.githubusercontent.com/datajhp/foood22/main/2222.png" width="100%">
   <img src="https://raw.githubusercontent.com/datajhp/foood22/main/3333.png" width="100%">
 </div>
