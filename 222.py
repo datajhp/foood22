@@ -159,7 +159,7 @@ if posts:
     post_map = {title: p for title, p in zip(post_titles, posts)}
 
     st.markdown("### 📄 게시글 목록")
-    selected_title = st.selectbox("보고싶은 게시글을 선택하세요:", post_titles)
+    selected_title = st.selectbox("아래 목록에서 보고싶은 게시글을 선택하세요:", post_titles)
 
     # ✅ 선택한 게시글 데이터 가져오기
     selected_post = post_map.get(selected_title)
