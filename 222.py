@@ -37,7 +37,7 @@ if now_kst < work_end:
     time_left = work_end - now_kst
     hours, remainder = divmod(time_left.seconds, 3600)
     minutes = remainder // 60
-    work_msg = f"이제 퇴근까지 단 {hours}시간하구 {minutes}분 남았습니당!"
+    work_msg = f"이제 퇴근까지 🕐{hours}시간, {minutes}분 남았습니당!"
 else:
     work_msg = "오늘도 고생 많으셨어요! 퇴근 시간입니다 🎉"
 
