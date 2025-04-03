@@ -26,7 +26,7 @@ weekday_kor = ['월요일', '화요일', '수요일', '목요일', '금요일', 
 # 주말까지 남은 일수 계산
 if weekday < 5:
     days_left = 5 - weekday  # 토요일이 주말 기준
-    weekend_msg = f"주말까지 {days_left}일 남았습니다. 힘내세요!"
+    weekend_msg = f"이번 주말까지 {days_left}일 남았습니다. 힘내세요!"
 else:
     weekend_msg = "주말입니다! 푹 쉬세요 😊"
 
