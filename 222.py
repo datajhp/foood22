@@ -43,8 +43,11 @@ else:
 
 # 출력
 st.subheader(f"오늘은 {today_date} ({weekday_kor})입니다.")
-st.success(weekend_msg)
-st.info(work_msg)
+col7, col8 = st.columns(2)
+with col7:
+    st.success(weekend_msg)
+with col8:
+    st.info(work_msg)
 
 # 카카오톡 채널 URL 2개
 url1 = "https://pf.kakao.com/_CiVis/posts"
