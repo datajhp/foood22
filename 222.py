@@ -250,7 +250,7 @@ if st.button("📤 글 등록하기"):
         st.rerun()
     else:
         st.warning("작성자, 식당, 내용을 모두 입력해주세요.")
-
+st.markdown("---")
 
 st.write("\n")
 st.write("\n")
