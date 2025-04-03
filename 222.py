@@ -250,6 +250,68 @@ if st.button("📤 글 등록하기"):
         st.rerun()
     else:
         st.warning("작성자, 식당, 내용을 모두 입력해주세요.")
+
+
+st.write("\n")
+st.write("\n")
+
+st.markdown(
+    """
+    <div style="background-color: #f2f2f2; color: #000; padding: 20px; text-align: center; font-size: 18px; 
+                border-radius: 10px; border: 2px solid #ccc; margin-bottom: 20px; width: 100%; font-weight: bold;">
+        🚀 **광고 배너** 🚀 <br>
+        이 자리는 광고 공간입니다. **광고를 게재하려면 여기를 클릭**하세요!<br>
+        문의사항과 가치있는 개발 아이디어도 보내주세요! 
+        <br>
+        <a href="https://open.kakao.com/o/sTv70Umh" target="_blank" style="color: #4CAF50; text-decoration: none;">광고 및 문의하기</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+# 하단 정보 영역
+st.markdown(
+   """
+    <div style="position: fixed; bottom: 10px; right: 10px; background-color: #000000; color: #FFFFFF; 
+                padding: 10px 20px; border-radius: 5px; font-size: 12px; z-index: 1000;">
+        <p style="margin: 0;">© 2025 by 데이터에듀 신사업본부</p>
+        <p style="margin: 0;">Contact us: jhp24228064@gmail.com</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
+
+
+components.html("""
+<div class="slider">
+  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/1111.png" width="100%">
+  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/2222.png" width="100%">
+  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/3333.png" width="100%">
+</div>
+<style>
+.slider {
+  display: flex;
+  overflow: hidden;
+  width: 900px;
+}
+.slider img {
+  animation: slide 9s infinite;
+}
+@keyframes slide {
+  0% {transform: translateX(0%);}
+  33% {transform: translateX(-100%);}
+  66% {transform: translateX(-200%);}
+  100% {transform: translateX(0%);}
+}
+</style>
+""", height=500)
+
+
+
 st.markdown("---")
 # UI 구성
 st.subheader("<메뉴 이미지만 불러오기>")
@@ -299,65 +361,7 @@ if st.button("저장하고 이미지 가져오기"):
             else:
                 st.warning("🍽️아직 메뉴가 공지되지 않았습니다.")
 
-st.write("\n")
-st.write("\n")
-
-st.markdown(
-    """
-    <div style="background-color: #f2f2f2; color: #000; padding: 20px; text-align: center; font-size: 18px; 
-                border-radius: 10px; border: 2px solid #ccc; margin-bottom: 20px; width: 100%; font-weight: bold;">
-        🚀 **광고 배너** 🚀 <br>
-        이 자리는 광고 공간입니다. **광고를 게재하려면 여기를 클릭**하세요!<br>
-        문의사항과 가치있는 개발 아이디어도 보내주세요! 
-        <br>
-        <a href="https://open.kakao.com/o/sTv70Umh" target="_blank" style="color: #4CAF50; text-decoration: none;">광고 및 문의하기</a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-
-# 하단 정보 영역
-st.markdown(
-   """
-    <div style="position: fixed; bottom: 10px; right: 10px; background-color: #000000; color: #FFFFFF; 
-                padding: 10px 20px; border-radius: 5px; font-size: 12px; z-index: 1000;">
-        <p style="margin: 0;">© 2025 by 데이터에듀 신사업본부</p>
-        <p style="margin: 0;">Contact us: jhp24228064@gmail.com</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
 
 # 페이지 내용
-st.write("<<☕커피 환영합니다☕📞모든 광고문의를 환영합니다📞🏠퇴근도 환영합니다🏠>>")
-
-
-
-
-components.html("""
-<div class="slider">
-  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/1111.png" width="100%">
-  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/2222.png" width="100%">
-  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/3333.png" width="100%">
-</div>
-<style>
-.slider {
-  display: flex;
-  overflow: hidden;
-  width: 900px;
-}
-.slider img {
-  animation: slide 9s infinite;
-}
-@keyframes slide {
-  0% {transform: translateX(0%);}
-  33% {transform: translateX(-100%);}
-  66% {transform: translateX(-200%);}
-  100% {transform: translateX(0%);}
-}
-</style>
-""", height=500)
-
+st.write("     <<☕커피 환영합니다☕📞모든 광고문의를 환영합니다📞🏠퇴근도 환영합니다🏠>>")
 
