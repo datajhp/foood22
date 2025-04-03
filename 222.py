@@ -18,8 +18,6 @@ now_kst = datetime.datetime.now(kst)
 today_date = now_kst.date()
 
 st.title("🍽️오늘의 메뉴's🍽️")
-st.subheader(f"{today_date}")
-
 # 날짜 및 요일 추출
 today_date = now_kst.date()
 weekday = now_kst.weekday()  # 0: 월요일, ..., 6: 일요일
@@ -44,7 +42,7 @@ else:
     work_msg = "오늘도 고생 많으셨어요! 퇴근 시간입니다 🎉"
 
 # 출력
-st.write(f"오늘은 {today_date} ({weekday_kor})입니다.")
+st.subheader(f"오늘은 {today_date} ({weekday_kor})입니다.")
 st.success(weekend_msg)
 st.info(work_msg)
 
