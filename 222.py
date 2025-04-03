@@ -42,7 +42,7 @@ else:
     work_msg = "오늘도 고생 많으셨어요! 퇴근 시간입니다 🎉"
 
 # 출력
-st.write(f"오늘은 {today_date} ({weekday_kor})입니다.")
+st.write(f" 날짜: {today_date} ({weekday_kor})입니다.")
 col7, col8 = st.columns(2)
 with col7:
     st.success(weekend_msg)
