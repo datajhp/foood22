@@ -158,8 +158,8 @@ if posts:
     post_titles = [f"{p['restaurant']} 리뷰 - 작성자: {p['title']} ({p['created_at'][:10]})" for p in posts]
     post_map = {title: p for title, p in zip(post_titles, posts)}
 
-    st.markdown("### 📄 리뷰 게시글 목록")
-    selected_title = st.selectbox("게시글을 선택하세요:", post_titles)
+    st.markdown("### 📄 게시글 목록")
+    selected_title = st.selectbox("보고싶은 게시글을 선택하세요:", post_titles)
 
     # ✅ 선택한 게시글 데이터 가져오기
     selected_post = post_map.get(selected_title)
