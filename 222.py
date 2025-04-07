@@ -110,12 +110,13 @@ col11, col12 = st.columns([2, 1])
 with col11:
     st.title("🍽️오늘의 메뉴's🍽️")
     st.write(f" 날짜: {today_date} ({weekday_kor})")
+    st.success(weekend_msg)
+    st.info(work_msg)
 
 with col12:
     components.html(html_code, height=168)
 
 # 출력
-st.write(f" 날짜: {today_date} ({weekday_kor})")
 col7, col8 = st.columns(2)
 with col7:
     st.success(weekend_msg)
