@@ -348,6 +348,10 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
+
+
+image_urls = [item["url"] for item in image_urls3]
+
 # 슬라이드 구성
 slide_width = 100
 image_count = 8
@@ -362,7 +366,7 @@ for i in range(image_count + 1):
     keyframes += f"{percent}% {{ transform: translateX({move}px); }}\n"
 
 # 이미지 태그 HTML로 생성
-images_html = ''.join([f'<img src="{url}">' for url in image_urls3])
+images_html = ''.join([f'<img src="{url}">' for url in image_urls])
 
 # HTML 슬라이더 코드
 html_code = f"""
