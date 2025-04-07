@@ -337,7 +337,7 @@ for i in range(image_count + 1):
     keyframes += f"{percent}% {{ transform: translateX({move}px); }}\n"
 
 # 이미지 태그 HTML로 생성
-images_html = ''.join([f'<img src="{url}">' for url in image_urls])
+images_html = ''.join([f'<img src="{url}">' for url in image_urls3])
 
 # HTML 슬라이더 코드
 html_code = f"""
