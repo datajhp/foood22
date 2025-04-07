@@ -377,29 +377,58 @@ html_code = f"""
 components.html(html_code, height=500)
 
 
-components.html("""
+# 슬라이드 구성
+slide_width = 100
+image_count = len(image_urls3)
+total_width = slide_width * image_count
+animation_time = image_count * 3  # 3초 간격
+
+# 슬라이딩 애니메이션 단계 자동 생성
+keyframes = ""
+for i in range(image_count + 1):
+    percent = round((i / image_count) * 100, 2)
+    move = -(slide_width * i)
+    keyframes += f"{percent}% {{ transform: translateX({move}px); }}\n"
+
+# 이미지 태그 HTML로 생성
+images_html = ''.join([f'<img src="{url}">' for url in image_urls3])
+
+# HTML 슬라이더 코드
+html_code = f"""
 <div class="slider">
-  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/1111.png" width="200%">
-  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/2222.png" width="150%">
-  <img src="https://raw.githubusercontent.com/datajhp/foood22/main/3333.png" width="100%">
+  <div class="slide-track">
+    {images_html}
+  </div>
 </div>
+
 <style>
-.slider {
-  display: flex;
+.slider {{
+  width: {slide_width}px;
   overflow: hidden;
-  width: 900px;
-}
-.slider img {
-  animation: slide 9s infinite;
-}
-@keyframes slide {
-  0% {transform: translateX(0%);}
-  33% {transform: translateX(-100%);}
-  66% {transform: translateX(-200%);}
-  100% {transform: translateX(0%);}
-}
+  margin: auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}}
+
+.slide-track {{
+  display: flex;
+  width: {total_width}px;
+  animation: slide {animation_time}s infinite;
+}}
+
+.slide-track img {{
+  width: {slide_width}px;
+  height: auto;
+  object-fit: cover;
+}}
+
+@keyframes slide {{
+  {keyframes}
+}}
 </style>
-""", height=500)
+"""
+
+components.html(html_code, height=500)
 
 
 
