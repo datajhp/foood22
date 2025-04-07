@@ -105,7 +105,7 @@ if now_kst < work_end:
 else:
     work_msg = "오늘도 고생 많으셨어요! 퇴근 시간입니다 🎉"
 
-col11, col12 = st.columns([2, 1])
+col11, col12 = st.columns([3, 2])
 
 with col11:
     st.title("🍽️오늘의 메뉴's🍽️")
@@ -115,13 +115,6 @@ with col11:
 
 with col12:
     components.html(html_code, height=168)
-
-# 출력
-col7, col8 = st.columns(2)
-with col7:
-    st.success(weekend_msg)
-with col8:
-    st.info(work_msg)
 
 # 카카오톡 채널 URL 2개
 url1 = "https://pf.kakao.com/_CiVis/posts"
