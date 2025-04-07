@@ -337,7 +337,7 @@ with col3:
         st.session_state.img_index = (st.session_state.img_index + 1) % len(images)
 
 # 현재 이미지 표시
-current = images[st.session_state.img_index]
+current = images3[st.session_state.img_index]
 st.image(current["url"], width=700)
 st.markdown(f"**{st.session_state.img_index + 1} / {len(images)}** - {current['desc']}")
 
