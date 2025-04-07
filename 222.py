@@ -428,7 +428,7 @@ html_code = f"""
 </style>
 """
 
-components.html(html_code, height=1000)
+components.html(html_code, height=500)
 
 
 
