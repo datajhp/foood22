@@ -76,7 +76,7 @@ object-fit: cover;
 </style>
 """
 
-    components.html(html_code, height=500)
+components.html(html_code, height=500)
 
 kst = pytz.timezone('Asia/Seoul')
 now_kst = datetime.datetime.now(kst)
