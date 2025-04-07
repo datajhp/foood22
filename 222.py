@@ -320,12 +320,12 @@ image_urls3 = [
  "https://raw.githubusercontent.com/datajhp/foood22/main/K05.jpg",
    "https://raw.githubusercontent.com/datajhp/foood22/main/K06.jpg",
   "https://raw.githubusercontent.com/datajhp/foood22/main/K07.jpg",
-    "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg"  # 마지막 1장은 업로드 이미지
+    "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg"
 ]
 
 # 슬라이드 구성
 slide_width = 100
-image_count = len(image_urls3)
+image_count = 8
 total_width = slide_width * image_count
 animation_time = image_count * 3  # 3초 간격
 
