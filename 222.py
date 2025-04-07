@@ -328,7 +328,7 @@ if "img_index" not in st.session_state:
     st.session_state.img_index = 0
 
 # 좌우 버튼 UI
-col1, col2, col3 = st.columns([1, 6, 1])
+col1, col2, col3 = st.columns([2, 4, 2])
 with col1:
     if st.button("◀️ 이전"):
         st.session_state.img_index = (st.session_state.img_index - 1) % len(image_urls3)
@@ -405,59 +405,6 @@ html_code = f"""
 
 components.html(html_code, height=500)
 
-
-# 슬라이드 구성
-slide_width = 600
-image_count = len(image_urls3)
-total_width = slide_width * image_count
-animation_time = image_count * 3  # 3초 간격
-
-# 슬라이딩 애니메이션 단계 자동 생성
-keyframes = ""
-for i in range(image_count):
-    percent = round((i / image_count) * 100, 2)
-    move = -(slide_width * i)
-    keyframes += f"{percent}% {{ transform: translateX({move}px); }}\n"
-
-# 이미지 태그 HTML로 생성
-images_html = ''.join([f'<img src="{url}">' for url in image_urls3])
-
-# HTML 슬라이더 코드
-html_code = f"""
-<div class="slider">
-  <div class="slide-track">
-    {images_html}
-  </div>
-</div>
-
-<style>
-.slider {{
-  width: {slide_width}px;
-  overflow: hidden;
-  margin: auto;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-}}
-
-.slide-track {{
-  display: flex;
-  width: {total_width}px;
-  animation: slide {animation_time}s infinite;
-}}
-
-.slide-track img {{
-  width: {slide_width}px;
-  height: auto;
-  object-fit: cover;
-}}
-
-@keyframes slide {{
-  {keyframes}
-}}
-</style>
-"""
-
-components.html(html_code, height=1100)
 
 
 
