@@ -378,7 +378,7 @@ components.html(html_code, height=500)
 
 
 # 슬라이드 구성
-slide_width = 750
+slide_width = 700
 image_count = len(image_urls3)
 total_width = slide_width * image_count
 animation_time = image_count * 3  # 3초 간격
