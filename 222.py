@@ -385,12 +385,12 @@ if "img_index" not in st.session_state:
     st.session_state.img_index = 0
 
 # 좌우 버튼 UI
-col1, col2, col3 = st.columns([2, 10, 2])
+col1, col2, col3, col4, col5 = st.columns([2, 3, 4, 3, 2])
 with col1:
     if st.button("◀️ 이전"):
         st.session_state.img_index = (st.session_state.img_index - 1) % len(image_urls3)
         
-with col2:
+with col3:
     st.subheader("정재원전 갤러리")
 
         
