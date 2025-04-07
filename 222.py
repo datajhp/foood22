@@ -324,7 +324,7 @@ image_urls3 = [
 ]
 
 # 슬라이드 구성
-slide_width = 900
+slide_width = 100
 image_count = len(image_urls3)
 total_width = slide_width * image_count
 animation_time = image_count * 3  # 3초 간격
