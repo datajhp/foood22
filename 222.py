@@ -313,15 +313,33 @@ st.markdown(
 )
 
 image_urls3 = [
-    "https://raw.githubusercontent.com/datajhp/foood22/main/K01.jpg",
-   "https://raw.githubusercontent.com/datajhp/foood22/main/K02.jpg",
-   "https://raw.githubusercontent.com/datajhp/foood22/main/K03.jpg",
-   "https://raw.githubusercontent.com/datajhp/foood22/main/K04.jpg",
- "https://raw.githubusercontent.com/datajhp/foood22/main/K05.jpg",
-   "https://raw.githubusercontent.com/datajhp/foood22/main/K06.jpg",
-  "https://raw.githubusercontent.com/datajhp/foood22/main/K07.jpg",
-    "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg"
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K01.jpg", "desc": "귀여운 강아지의 첫인상"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K02.jpg", "desc": "카메라를 응시하는 댕댕이"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K03.jpg", "desc": "포근한 분위기 속 친구들"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K04.jpg", "desc": "간식을 기다리는 표정"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K05.jpg", "desc": "살짝 고개를 기울인 모습"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K06.jpg", "desc": "햇살 받는 강아지"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K07.jpg", "desc": "집중하는 귀여운 눈빛"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg", "desc": "마지막 친구까지 총출동!"}
 ]
+
+# 현재 인덱스 저장
+if "img_index" not in st.session_state:
+    st.session_state.img_index = 0
+
+# 이전 / 다음 버튼 구성
+col1, col2, col3 = st.columns([1, 6, 1])
+with col1:
+    if st.button("◀️ 이전"):
+        st.session_state.img_index = (st.session_state.img_index - 1) % len(images)
+with col3:
+    if st.button("다음 ▶️"):
+        st.session_state.img_index = (st.session_state.img_index + 1) % len(images)
+
+# 현재 이미지 표시
+current = images[st.session_state.img_index]
+st.image(current["url"], width=700)
+st.markdown(f"**{st.session_state.img_index + 1} / {len(images)}** - {current['desc']}")
 
 # 슬라이드 구성
 slide_width = 100
