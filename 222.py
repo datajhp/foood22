@@ -11,14 +11,14 @@ import random
 import pytz
 import streamlit.components.v1 as components
 image_urls3 = [
-    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K01.jpg", "desc": "귀여운 강아지의 첫인상"},
-    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K02.jpg", "desc": "카메라를 응시하는 댕댕이"},
-    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K03.jpg", "desc": "포근한 분위기 속 친구들"},
-    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K04.jpg", "desc": "간식을 기다리는 표정"},
-    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K05.jpg", "desc": "살짝 고개를 기울인 모습"},
-    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K06.jpg", "desc": "햇살 받는 강아지"},
-    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K07.jpg", "desc": "집중하는 귀여운 눈빛"},
-    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg", "desc": "마지막 친구까지 총출동!"}
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K01.jpg", "desc": "화가 욤욤"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K02.jpg", "desc": "카메라를 응시하는 욤욤"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K03.jpg", "desc": "포근한 분위기 속 름름"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K04.jpg", "desc": "따뜻한 햇살아래 쁨쁨"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K05.jpg", "desc": "욤욤쁨쁨"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K06.jpg", "desc": "하늘 푸름름"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K07.jpg", "desc": "근육 쁨쁨"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg", "desc": "욤욤쁨쁨름름 총출동!"}
 ]
 image_urls = [item["url"] for item in image_urls3]
 
