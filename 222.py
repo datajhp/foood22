@@ -391,7 +391,7 @@ with col1:
         st.session_state.img_index = (st.session_state.img_index - 1) % len(image_urls3)
         
 with col3:
-    st.subheader("정재원전 갤러리")
+    st.write("정재원전 갤러리")
 
         
 with col3:
