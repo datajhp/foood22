@@ -22,11 +22,9 @@ image_urls3 = [
 ]
 image_urls = [item["url"] for item in image_urls3]
 
-col11, col12 = st.columns(2)
 
-with col11:
-    st.set_page_config(page_title="오늘의 메뉴's",page_icon="🍴")
-with col12:
+st.set_page_config(page_title="오늘의 메뉴's",page_icon="🍴")
+
     # 슬라이드 구성
     slide_width = 100
     image_count = 8
@@ -79,11 +77,6 @@ with col12:
     """
 
     components.html(html_code, height=500)
-
-
-
-
-
 
 kst = pytz.timezone('Asia/Seoul')
 now_kst = datetime.datetime.now(kst)
