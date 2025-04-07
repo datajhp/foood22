@@ -385,7 +385,7 @@ animation_time = image_count * 3  # 3초 간격
 
 # 슬라이딩 애니메이션 단계 자동 생성
 keyframes = ""
-for i in range(image_count + 1):
+for i in range(image_count):
     percent = round((i / image_count) * 100, 2)
     move = -(slide_width * i)
     keyframes += f"{percent}% {{ transform: translateX({move}px); }}\n"
