@@ -312,8 +312,69 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+image_urls3 = [
+    "https://raw.githubusercontent.com/datajhp/foood22/main/K01.jpg",
+   "https://raw.githubusercontent.com/datajhp/foood22/main/K02.jpg",
+   "https://raw.githubusercontent.com/datajhp/foood22/main/K03.jpg",
+   "https://raw.githubusercontent.com/datajhp/foood22/main/K04.jpg",
+ "https://raw.githubusercontent.com/datajhp/foood22/main/K05.jpg",
+   "https://raw.githubusercontent.com/datajhp/foood22/main/K06.jpg",
+  "https://raw.githubusercontent.com/datajhp/foood22/main/K07.jpg",
+    "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg"  # 마지막 1장은 업로드 이미지
+]
 
+# 슬라이드 구성
+slide_width = 900
+image_count = len(image_urls3)
+total_width = slide_width * image_count
+animation_time = image_count * 3  # 3초 간격
 
+# 슬라이딩 애니메이션 단계 자동 생성
+keyframes = ""
+for i in range(image_count + 1):
+    percent = round((i / image_count) * 100, 2)
+    move = -(slide_width * i)
+    keyframes += f"{percent}% {{ transform: translateX({move}px); }}\n"
+
+# 이미지 태그 HTML로 생성
+images_html = ''.join([f'<img src="{url}">' for url in image_urls])
+
+# HTML 슬라이더 코드
+html_code = f"""
+<div class="slider">
+  <div class="slide-track">
+    {images_html}
+  </div>
+</div>
+
+<style>
+.slider {{
+  width: {slide_width}px;
+  overflow: hidden;
+  margin: auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}}
+
+.slide-track {{
+  display: flex;
+  width: {total_width}px;
+  animation: slide {animation_time}s infinite;
+}}
+
+.slide-track img {{
+  width: {slide_width}px;
+  height: auto;
+  object-fit: cover;
+}}
+
+@keyframes slide {{
+  {keyframes}
+}}
+</style>
+"""
+
+components.html(html_code, height=500)
 
 
 components.html("""
