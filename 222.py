@@ -25,56 +25,56 @@ image_urls = [item["url"] for item in image_urls3]
 
 st.set_page_config(page_title="오늘의 메뉴's",page_icon="🍴")
 
-    # 슬라이드 구성
-    slide_width = 100
-    image_count = 8
-    total_width = slide_width * image_count
-    animation_time = image_count * 3  # 3초 간격
+# 슬라이드 구성
+slide_width = 100
+image_count = 8
+total_width = slide_width * image_count
+animation_time = image_count * 3  # 3초 간격
 
-    # 슬라이딩 애니메이션 단계 자동 생성
-    keyframes = ""
-    for i in range(image_count + 1):
-        percent = round((i / image_count) * 100, 2)
-        move = -(slide_width * i)
-        keyframes += f"{percent}% {{ transform: translateX({move}px); }}\n"
+# 슬라이딩 애니메이션 단계 자동 생성
+keyframes = ""
+for i in range(image_count + 1):
+    percent = round((i / image_count) * 100, 2)
+    move = -(slide_width * i)
+    keyframes += f"{percent}% {{ transform: translateX({move}px); }}\n"
 
-    # 이미지 태그 HTML로 생성
-    images_html = ''.join([f'<img src="{url}">' for url in image_urls])
+# 이미지 태그 HTML로 생성
+images_html = ''.join([f'<img src="{url}">' for url in image_urls])
 
-    # HTML 슬라이더 코드
-    html_code = f"""
-    <div class="slider">
-      <div class="slide-track">
-        {images_html}
-      </div>
-    </div>
+# HTML 슬라이더 코드
+html_code = f"""
+<div class="slider">
+<div class="slide-track">
+    {images_html}
+</div>
+</div>
 
-    <style>
-    .slider {{
-      width: {slide_width}px;
-      overflow: hidden;
-      margin: auto;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-    }}
+<style>
+.slider {{
+    width: {slide_width}px;
+    overflow: hidden;
+    margin: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}}
 
-    .slide-track {{
-      display: flex;
-      width: {total_width}px;
-      animation: slide {animation_time}s infinite;
-    }}
+.slide-track {{
+display: flex;
+width: {total_width}px;
+animation: slide {animation_time}s infinite;
+}}
 
-    .slide-track img {{
-      width: {slide_width}px;
-      height: auto;
-      object-fit: cover;
-    }}
+.slide-track img {{
+width: {slide_width}px;
+height: auto;
+object-fit: cover;
+}}
 
-    @keyframes slide {{
-      {keyframes}
-    }}
-    </style>
-    """
+@keyframes slide {{
+    {keyframes}
+}}
+</style>
+"""
 
     components.html(html_code, height=500)
 
