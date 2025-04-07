@@ -282,22 +282,22 @@ if st.button("📤 글 등록하기"):
         st.warning("작성자, 식당, 내용을 모두 입력해주세요.")
 st.markdown("---")
 
-st.write("\n")
-st.write("\n")
-
-st.markdown(
-    """
-    <div style="background-color: #f2f2f2; color: #000; padding: 20px; text-align: center; font-size: 18px; 
-                border-radius: 10px; border: 2px solid #ccc; margin-bottom: 20px; width: 100%; font-weight: bold;">
-        🚀 **광고 배너** 🚀 <br>
-        이 자리는 광고 공간입니다. **광고를 게재하려면 여기를 클릭**하세요!<br>
-        문의사항과 가치있는 개발 아이디어도 보내주세요! 
-        <br>
-        <a href="https://open.kakao.com/o/sTv70Umh" target="_blank" style="color: #4CAF50; text-decoration: none;">광고 및 문의하기</a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+#st.write("\n")
+#st.write("\n")
+#
+#st.markdown(
+#    """
+#    <div style="background-color: #f2f2f2; color: #000; padding: 20px; text-align: center; font-size: 18px; 
+#                border-radius: 10px; border: 2px solid #ccc; margin-bottom: 20px; width: 100%; font-weight: bold;">
+#        🚀 **광고 배너** 🚀 <br>
+#        이 자리는 광고 공간입니다. **광고를 게재하려면 여기를 클릭**하세요!<br>
+#       문의사항과 가치있는 개발 아이디어도 보내주세요! 
+#        <br>
+#        <a href="https://open.kakao.com/o/sTv70Umh" target="_blank" style="color: #4CAF50; text-decoration: none;">광고 및 문의하기</a>
+#    </div>
+#    """,
+#    unsafe_allow_html=True
+#)
 
 
 # 하단 정보 영역
@@ -328,7 +328,7 @@ if "img_index" not in st.session_state:
     st.session_state.img_index = 0
 
 # 좌우 버튼 UI
-col1, col2, col3 = st.columns([2, 5, 2])
+col1, col2, col3 = st.columns([2, 6, 2])
 with col1:
     if st.button("◀️ 이전"):
         st.session_state.img_index = (st.session_state.img_index - 1) % len(image_urls3)
