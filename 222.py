@@ -338,7 +338,8 @@ with col3:
 
 # 현재 이미지 및 설명 출력
 current = image_urls3[st.session_state.img_index]
-st.image(current["url"], width=700, use_column_width=False)
+st.image(current["url"], use_container_width=True)
+
 
 # 텍스트 설명 표시
 st.markdown(f"""
