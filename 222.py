@@ -323,23 +323,29 @@ image_urls3 = [
     {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg", "desc": "마지막 친구까지 총출동!"}
 ]
 
-# 현재 인덱스 저장
+# 세션 상태로 현재 인덱스 추적
 if "img_index" not in st.session_state:
     st.session_state.img_index = 0
 
-# 이전 / 다음 버튼 구성
+# 좌우 버튼 UI
 col1, col2, col3 = st.columns([1, 6, 1])
 with col1:
     if st.button("◀️ 이전"):
-        st.session_state.img_index = (st.session_state.img_index - 1) % len(images)
+        st.session_state.img_index = (st.session_state.img_index - 1) % len(image_urls3)
 with col3:
     if st.button("다음 ▶️"):
-        st.session_state.img_index = (st.session_state.img_index + 1) % len(images)
+        st.session_state.img_index = (st.session_state.img_index + 1) % len(image_urls3)
 
-# 현재 이미지 표시
-current = images3[st.session_state.img_index]
-st.image(current["url"], width=700)
-st.markdown(f"**{st.session_state.img_index + 1} / {len(images)}** - {current['desc']}")
+# 현재 이미지 및 설명 출력
+current = image_urls3[st.session_state.img_index]
+st.image(current["url"], width=700, use_column_width=False)
+
+# 텍스트 설명 표시
+st.markdown(f"""
+<div style="text-align: center; font-size: 18px; margin-top: 10px;">
+  <strong>{st.session_state.img_index + 1} / {len(image_urls3)}</strong> - {current['desc']}
+</div>
+""", unsafe_allow_html=True)
 
 # 슬라이드 구성
 slide_width = 100
