@@ -82,7 +82,7 @@ with col11:
     st.title("🍽️오늘의 메뉴's🍽️")
 
 with col12:
-    components.html(html_code, height=500)
+    components.html(html_code, height=200)
 
 
 kst = pytz.timezone('Asia/Seoul')
