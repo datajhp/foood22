@@ -76,14 +76,6 @@ object-fit: cover;
 </style>
 """
 
-col11, col12 = st.columns([2, 1])
-
-with col11:
-    st.title("🍽️오늘의 메뉴's🍽️")
-
-with col12:
-    components.html(html_code, height=168)
-
 
 kst = pytz.timezone('Asia/Seoul')
 now_kst = datetime.datetime.now(kst)
@@ -112,6 +104,15 @@ if now_kst < work_end:
     work_msg = f"이제 퇴근까지 🕐{hours}시간, {minutes}분 남았습니당!"
 else:
     work_msg = "오늘도 고생 많으셨어요! 퇴근 시간입니다 🎉"
+
+col11, col12 = st.columns([2, 1])
+
+with col11:
+    st.title("🍽️오늘의 메뉴's🍽️")
+    st.write(f" 날짜: {today_date} ({weekday_kor})")
+
+with col12:
+    components.html(html_code, height=168)
 
 # 출력
 st.write(f" 날짜: {today_date} ({weekday_kor})")
