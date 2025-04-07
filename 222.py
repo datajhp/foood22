@@ -26,7 +26,7 @@ image_urls = [item["url"] for item in image_urls3]
 st.set_page_config(page_title="오늘의 메뉴's",page_icon="🍴")
 
 # 슬라이드 구성
-slide_width = 180
+slide_width = 170
 image_count = 8
 total_width = slide_width * image_count
 animation_time = image_count * 3  # 3초 간격
@@ -114,7 +114,7 @@ with col11:
     st.info(work_msg)
 
 with col12:
-    components.html(html_code, height=302)
+    components.html(html_code, height=290)
 
 # 카카오톡 채널 URL 2개
 url1 = "https://pf.kakao.com/_CiVis/posts"
