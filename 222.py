@@ -76,13 +76,20 @@ object-fit: cover;
 </style>
 """
 
-components.html(html_code, height=500)
+col11, col12 = st.columns([1, 2])
+
+with col11:
+    st.title("🍽️오늘의 메뉴's🍽️")
+
+with col12:
+    components.html(html_code, height=500)
+
 
 kst = pytz.timezone('Asia/Seoul')
 now_kst = datetime.datetime.now(kst)
 today_date = now_kst.date()
 
-st.title("🍽️오늘의 메뉴's🍽️")
+
 # 날짜 및 요일 추출
 today_date = now_kst.date()
 weekday = now_kst.weekday()  # 0: 월요일, ..., 6: 일요일
