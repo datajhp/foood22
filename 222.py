@@ -17,8 +17,8 @@ image_urls3 = [
     {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K04.jpg", "desc": "따뜻한 햇살아래, 먹을 것을 찾는 욤욤"},
     {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K05.jpg", "desc": "쁨욤쁨욤"},
     {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K06.jpg", "desc": "오늘 하늘 푸름름"},
-    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K07.jpg", "desc": "간식을 많이 욤욤한 기욤욤"},
-    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg", "desc": "쁨쁨름름욤욤 총출동! 정확한 발음이 가능하신 분께 굿즈를 드립니다."}
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K07.jpg", "desc": "간식을 많이 욤욤해서 기쁜 기쁨쁨"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg", "desc": "정쁨쁨름름욤욤 총출동! 정확한 발음이 가능하신 분께 굿즈를 드립니다."}
 ]
 image_urls = [item["url"] for item in image_urls3]
 
