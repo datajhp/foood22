@@ -389,6 +389,11 @@ col1, col2, col3 = st.columns([2, 10, 2])
 with col1:
     if st.button("◀️ 이전"):
         st.session_state.img_index = (st.session_state.img_index - 1) % len(image_urls3)
+        
+with col2:
+    st.subheader(정재원전 갤러리)
+
+        
 with col3:
     if st.button("다음 ▶️"):
         st.session_state.img_index = (st.session_state.img_index + 1) % len(image_urls3)
