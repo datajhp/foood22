@@ -121,7 +121,7 @@ with col11:
     st.info(work_msg)
 
 with col12:
-    components.html(html_code, height=250)
+    components.html(html_code, height=260)
 
 # 카카오톡 채널 URL 2개
 url1 = "https://pf.kakao.com/_CiVis/posts"
