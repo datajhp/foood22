@@ -317,8 +317,8 @@ for c in comment_res.data:
         background-color:#2c2c2a;
             order-radius:6px;
     '>
-        <p style='margin-bottom:2px;'>{c['content']}</p>
-        <div style='font-size:11px; color:#0000;'>작성일: {c['created_at'][:19].replace('T', ' ')}</div>
+        <p style='margin-bottom:5px; color:#f1f1f1; font-size:15px;'>{c['content']}</p>
+        <div style='font-size:11px; color:#888;'>작성일: {c['created_at'][:19].replace('T', ' ')}</div>
     </div>
     """, unsafe_allow_html=True)
 st.markdown("---")
