@@ -18,7 +18,11 @@ image_urls3 = [
     {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K05.jpg", "desc": "쁨욤쁨욤"},
     {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K06.jpg", "desc": "오늘 하늘 푸름름"},
     {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K07.jpg", "desc": "간식을 많이 욤욤해서 기쁜 기쁨쁨"},
-    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg", "desc": "정쁨쁨름름욤욤 총출동! (정확한 발음이 가능하신 분께 굿즈를 드립니다.)"}
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K08.jpg", "desc": "정쁨쁨름름욤욤 총출동! (정확한 발음이 가능하신 분께 굿즈를 드립니다.)"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K10.jpg", "desc": "얼빡샷"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K11.jpg", "desc": "배고픔"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K12.jpg", "desc": "난 행복한 강아지에요 헤헤"},
+    {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K13.jpg", "desc": "이게 뭐시 데요~?"}
 ]
 image_urls = [item["url"] for item in image_urls3]
 
@@ -27,7 +31,7 @@ st.set_page_config(page_title="오늘의 메뉴's",page_icon="🍴")
 
 # 슬라이드 구성
 slide_width = 160
-image_count = 8
+image_count = 12
 total_width = slide_width * image_count
 animation_time = image_count * 3  # 3초 간격
 
