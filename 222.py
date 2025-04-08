@@ -21,6 +21,10 @@ st.markdown("""
             background-color: #1c1c1c;
             color: #f1f1f1;
         }
+        /* 사이드바 배경 */
+        .css-1d391kg {  /* sidebar class */
+            background-color: #111 !important;
+        }
     </style>
 """, unsafe_allow_html=True)
 
