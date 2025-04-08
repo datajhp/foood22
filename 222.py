@@ -10,6 +10,21 @@ import datetime
 import random
 import pytz
 import streamlit.components.v1 as components
+
+import streamlit as st
+
+# 전체 배경 다크 스타일 적용
+st.markdown("""
+    <style>
+        /* 전체 페이지 배경 */
+        .main {
+            background-color: #1c1c1c;
+            color: #f1f1f1;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+
 image_urls3 = [
     {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K01.jpg", "desc": "화가느낌 쁨쁨"},
     {"url": "https://raw.githubusercontent.com/datajhp/foood22/main/K02.jpg", "desc": "카메라를 응시하는 쁨쁨"},
