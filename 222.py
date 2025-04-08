@@ -33,7 +33,7 @@ image_urls = [item["url"] for item in image_urls3]
 st.set_page_config(page_title="오늘의 메뉴's",page_icon="🍴")
 
 # 슬라이드 구성
-slide_width = 160
+slide_width = 140
 image_count = 12
 total_width = slide_width * image_count
 animation_time = image_count * 3  # 3초 간격
