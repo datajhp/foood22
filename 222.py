@@ -127,7 +127,7 @@ with col12:
 url1 = "https://pf.kakao.com/_CiVis/posts"
 url2 = "https://pf.kakao.com/_vKxgdn/posts"
 url3 = "https://blog.naver.com/PostList.nhn?blogId=jusik1606&from=postList&categoryNo=6"
-url4 = "https://blog.naver.com/dawafood-qubi"
+url4 = "https://pf.kakao.com/_FxbaQC/posts"
 
 
 # 2개의 열로 나누기
