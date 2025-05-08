@@ -148,7 +148,7 @@ with col3:
     st.markdown(
         f"""
      <div style="width: 650px; height: 700px; overflow: hidden;">
-         <iframe src="{url3}" width="800" height="1300" 
+         <iframe src="{url3}" width="800" height="1340" 
                  style="transform: scale(0.44); transform-origin: 0 0;">
          </iframe>
      </div>
