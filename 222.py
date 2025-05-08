@@ -239,10 +239,11 @@ RESTAURANT_LIST = [
     "정담식당",
     "만나",
     "다와푸드 큐비",
-    "노스커피"
-    "카페"
+    "노스커피",
+    "카페",
     "Others",
-    "추천 식당"
+    "추천 식당",
+    "공지"
 ]
 
 res = supabase.table("posts").select("*").order("id", desc=True).execute()
