@@ -156,17 +156,8 @@ with col3:
      unsafe_allow_html=True
     )  
 with col4:
-    st.subheader("     📌 다와푸드 큐비")
-    st.markdown(
-            f"""
-     <div style="width: 650px; height: 700px; overflow: hidden;">
-         <iframe src="{url4}" width="800" height="1500" 
-                 style="transform: scale(0.44); transform-origin: 0 0;">
-         </iframe>
-     </div>
-     """,
-     unsafe_allow_html=True
-    )
+    st.subheader("     📌 제이앤제이(삼촌밥차)")
+    components.iframe(url4, height=600, width=1000)
     
 if "button_clicked" not in st.session_state:
     st.session_state.button_clicked = False    
