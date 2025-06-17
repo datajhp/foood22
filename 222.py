@@ -110,7 +110,18 @@ if now_kst < work_end:
     minutes = remainder // 60
     work_msg = f"이제 퇴근까지 🕐{hours}시간, {minutes}분 남았습니당!"
 else:
-    work_msg = "오늘도 고생 많으셨어요! 퇴근 시간입니다 🎉"
+    work_msg = "🌙오늘도 고생 많으셨어요! 퇴근 시간입니다 🎉"
+
+# 탈출 시간 계산
+escape_time = kst.localize(datetime.datetime(2024, 6, 26, 14, 0, 0))
+escape_delta = escape_time - now_kst
+if escape_delta.total_seconds() > 0:
+    days = escape_delta.days
+    hours, remainder = divmod(escape_delta.seconds, 3600)
+    minutes = remainder // 60
+    escape_msg = f"🚀 탈출까지 남은 시간: {days}일 {hours}시간 {minutes}분 ⏳"
+else:
+    escape_msg = "🎉 이미 탈출하셨습니다!! 진심으로 축하드립니다!! 🍾"
 
 col11, col12 = st.columns([3, 2])
 
