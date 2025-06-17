@@ -119,7 +119,7 @@ if escape_delta.total_seconds() > 0:
     days = escape_delta.days
     hours, remainder = divmod(escape_delta.seconds, 3600)
     minutes = remainder // 60
-    escape_msg = f"🚀 탈출까지 남은 시간: {days}일 {hours}시간 {minutes}분 ⏳"
+    escape_msg = f"🚀 준형 탈출까지 남은 시간 Count down: {days}일 {hours}시간 {minutes}분 ⏳"
 else:
     escape_msg = "🎉 이미 탈출하셨습니다!! 진심으로 축하드립니다!! 🍾"
 
