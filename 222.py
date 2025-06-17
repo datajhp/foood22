@@ -134,7 +134,7 @@ with col11:
 with col12:
     components.html(html_code, height=260)
 
-st.success(escape_time)
+st.success(escape_msg)
 # 카카오톡 채널 URL 2개
 url1 = "https://pf.kakao.com/_CiVis/posts"
 url2 = "https://pf.kakao.com/_vKxgdn/posts"
