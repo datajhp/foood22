@@ -113,7 +113,7 @@ else:
     work_msg = "🌙오늘도 고생 많으셨어요! 퇴근 시간입니다 🎉"
 
 # 탈출 시간 계산
-escape_time = kst.localize(datetime.datetime(2024, 6, 26, 14, 0, 0))
+escape_time = kst.localize(datetime.datetime(2025, 6, 26, 14, 0, 0))
 escape_delta = escape_time - now_kst
 if escape_delta.total_seconds() > 0:
     days = escape_delta.days
